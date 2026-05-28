@@ -164,10 +164,10 @@ function HomePage() {
 						<h1>Your Business Technology Partners</h1>
 						<div className="site-hero-actions">
 							<button type="button" className="site-primary-btn">
-								Explore Products
+								<a href="#product">Explore Products</a>
 							</button>
 							<button type="button" className="site-secondary-btn">
-								Request for Quote
+								<a href="/industries">Explore Industries</a>
 							</button>
 							<button type="button" className="site-tertiary-btn" aria-label="Download brochure">
 								<FolderDownloadIcon size={20} />
@@ -179,7 +179,7 @@ function HomePage() {
 
 			<section className="site-solutions" id="industries">
 				<div className="container">
-					<div className="site-section-title-wrap">
+					<div id="product" className="site-section-title-wrap">
 						<h2>Empowering Enterprises with Intelligent Solutions</h2>
 						<p>
 							Our business technology services are designed to help businesses streamline
