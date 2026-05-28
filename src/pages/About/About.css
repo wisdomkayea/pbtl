@@ -1,0 +1,446 @@
+.about-bridge-page {
+	background: #ffffff;
+}
+
+.about-bridge-hero {
+	background: #2d2d2d;
+	min-height: 670px;
+	overflow: hidden;
+	padding: 4.5rem 0 0;
+	position: relative;
+}
+
+.about-bridge-pattern {
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	inset: 0;
+	opacity: 0.22;
+	position: absolute;
+}
+
+.about-bridge-shape {
+	left: max(1rem, calc(50% - 610px));
+	position: absolute;
+	top: 0;
+	width: 260px;
+	z-index: 1;
+}
+
+.about-bridge-shape img {
+	display: block;
+	width: 100%;
+}
+
+.about-bridge-hero-content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 980px;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+.about-bridge-hero-content h1 {
+	color: #ffffff;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: clamp(2.25rem, 5.6vw, 4rem);
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 2.6rem 0 1.2rem;
+}
+
+.about-bridge-hero-content h1 span {
+	color: #fab708;
+	font-weight: 500;
+}
+
+.about-bridge-lead-copy {
+	max-width: 740px;
+}
+
+.about-bridge-lead-copy p {
+	color: #f2f4f7;
+	font-size: clamp(0.98rem, 1.3vw, 1.25rem);
+	line-height: 1.5;
+	margin: 0;
+}
+
+.about-bridge-lead-copy p + p {
+	margin-top: 1.2rem;
+}
+
+.about-bridge-stats {
+	background: #ffffff;
+	padding: 2.8rem 0;
+}
+
+.about-bridge-stats-grid {
+	display: grid;
+	gap: 1.8rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	max-width: 980px;
+	padding-bottom: 0.45rem;
+	padding-top: 0.35rem;
+}
+
+.about-stat-item {
+	border-right: 1px solid #e5e7eb;
+	padding-right: 0.8rem;
+}
+
+.about-stat-item:last-child {
+	border-right: 0;
+	padding-right: 0;
+}
+
+.about-stat-value {
+	color: #101828;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: 2rem;
+	line-height: 1;
+	margin: 0 0 0.6rem;
+}
+
+.about-stat-label {
+	color: #101828;
+	font-size: 0.92rem;
+	line-height: 1.5;
+	margin: 0;
+	max-width: 145px;
+}
+
+.about-bridge-mission-vision {
+	background: #f3f4f6;
+	padding: 5.2rem 0 3.3rem;
+	position: relative;
+}
+
+.about-bridge-mv-wrap {
+	max-width: 920px;
+	position: relative;
+}
+
+.about-bridge-ring {
+	pointer-events: none;
+	position: absolute;
+	width: 150px;
+	z-index: 10;
+}
+
+.about-bridge-ring-left {
+	left: -50px;
+	top: 290px;
+}
+
+.about-bridge-ring-right {
+	right: -50px;
+	top: 720px;
+}
+
+.about-bridge-row {
+	align-items: center;
+	display: grid;
+	gap: 1.35rem;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	z-index: 1;
+}
+
+.about-bridge-row + .about-bridge-row {
+	margin-top: 4.7rem;
+}
+
+.about-bridge-image-wrap {
+	height: 331px;
+	overflow: hidden;
+}
+
+.about-bridge-image-wrap img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.about-bridge-text-wrap h2,
+.about-bridge-core-values h2 {
+	color: #101828;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin: 0 0 0.9rem;
+}
+
+.about-bridge-text-wrap p {
+	color: #4a5565;
+	font-size: clamp(1rem, 1.3vw, 1.25rem);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.about-bridge-core-values {
+	margin-top: 4.4rem;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+
+.about-bridge-values-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	margin-top: 1.2rem;
+}
+
+.about-value-chip {
+	align-items: center;
+	display: inline-flex;
+	gap: 0.5rem;
+	justify-content: center;
+	min-height: 40px;
+	padding: 0.35rem 0.2rem;
+	white-space: nowrap;
+}
+
+.about-value-icon {
+	align-items: center;
+	background: #ffded4;
+	border-radius: 999px;
+	color: #9e371a;
+	display: inline-flex;
+	font-size: 1rem;
+	height: 38px;
+	justify-content: center;
+	line-height: 1;
+	width: 38px;
+}
+
+.about-value-chip span:last-child {
+	color: #101828;
+	font-size: 1rem;
+}
+
+.about-site-page {
+	background: #ececec;
+	min-height: calc(100vh - 140px);
+	overflow: hidden;
+	padding: 2.5rem 0 4.75rem;
+	position: relative;
+}
+
+.about-background-shape {
+	left: 7%;
+	position: absolute;
+	top: 0.5rem;
+	width: min(260px, 35vw);
+	z-index: 0;
+}
+
+.about-background-shape img {
+	display: block;
+	max-width: 100%;
+	opacity: 0.92;
+	width: 100%;
+}
+
+.about-site-container {
+	position: relative;
+	z-index: 1;
+}
+
+.about-site-gallery {
+	align-items: flex-end;
+	display: flex;
+	gap: 0.65rem;
+	justify-content: center;
+	margin: 1.2rem auto 1.1rem;
+	min-height: 365px;
+	width: 100%;
+}
+
+.about-card {
+	height: 276px;
+	overflow: hidden;
+	width: 201px;
+}
+
+.about-card img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.about-card-one {
+	transform: translateY(102px);
+	z-index: 1;
+}
+
+.about-card-two {
+	transform: translateY(42px);
+	z-index: 2;
+}
+
+.about-card-three {
+	transform: translateY(-18px);
+	z-index: 3;
+}
+
+.about-card-placeholder {
+	background: #e6e8eb;
+	transform: translateY(-80px);
+	width: 142px;
+	z-index: 0;
+}
+
+.about-site-copy {
+	margin: 0 auto;
+	max-width: 1030px;
+}
+
+.about-site-copy h1 {
+	border-bottom: 1px solid #d8dde5;
+	color: #101828;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: clamp(2rem, 5vw, 3.4rem);
+	font-weight: 500;
+	letter-spacing: 0.005em;
+	line-height: 1.18;
+	margin: 0;
+	padding: 0 0 0.7rem;
+}
+
+.about-site-copy p {
+	color: #4a5565;
+	font-size: clamp(1rem, 1.4vw, 2rem);
+	line-height: 1.45;
+	margin: 0.95rem 0 0;
+	max-width: 1000px;
+}
+
+@media (max-width: 992px) {
+	.about-bridge-row {
+		grid-template-columns: 1fr;
+	}
+
+	.about-bridge-row-mission .about-bridge-image-wrap {
+		order: -1;
+	}
+
+	.about-bridge-ring {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.about-bridge-hero {
+		min-height: 780px;
+		padding-top: 1.8rem;
+	}
+
+	.about-bridge-shape {
+		left: -20px;
+		top: 12px;
+		width: 190px;
+	}
+
+	.about-bridge-stats-grid {
+		gap: 1.2rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.about-stat-item {
+		border-right: 0;
+		border-top: 1px solid #e5e7eb;
+		padding-right: 0;
+		padding-top: 0.9rem;
+	}
+
+	.about-stat-item:nth-child(-n + 2) {
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	.about-bridge-row {
+		grid-template-columns: 1fr;
+	}
+
+	.about-bridge-row-mission .about-bridge-image-wrap {
+		order: -1;
+	}
+
+	.about-bridge-ring {
+		display: none;
+	}
+
+	.about-bridge-values-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.about-site-page {
+		padding-top: 1.4rem;
+	}
+
+	.about-background-shape {
+		left: -3rem;
+		top: 2.2rem;
+		width: 180px;
+	}
+
+	.about-site-gallery {
+		justify-content: flex-start;
+		overflow-x: auto;
+		padding-bottom: 0.5rem;
+		scrollbar-width: none;
+	}
+
+	.about-site-gallery::-webkit-scrollbar {
+		display: none;
+	}
+
+	.about-card {
+		flex: 0 0 auto;
+	}
+
+	.about-card-one,
+	.about-card-two,
+	.about-card-three,
+	.about-card-placeholder {
+		transform: none;
+	}
+
+	.about-card-placeholder {
+		height: 276px;
+	}
+
+	.about-site-copy p {
+		font-size: 1.05rem;
+	}
+}
+
+@media (max-width: 540px) {
+	.about-bridge-stats-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.about-stat-item,
+	.about-stat-item:nth-child(-n + 2) {
+		border-top: 1px solid #e5e7eb;
+		padding-top: 0.75rem;
+	}
+
+	.about-stat-item:first-child {
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	.about-bridge-hero-content h1 {
+		font-size: clamp(1.95rem, 9vw, 2.8rem);
+	}
+
+	.about-bridge-values-grid {
+		grid-template-columns: 1fr;
+	}
+}

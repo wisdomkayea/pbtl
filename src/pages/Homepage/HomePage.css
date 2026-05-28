@@ -1,0 +1,390 @@
+.site-home {
+	background: #f8f8f8;
+}
+
+.site-hero {
+	background: linear-gradient(109deg, #eef2f6 26%, #ffffff 39%, #eef2f6 59%);
+	min-height: min(900px, calc(100vh - 70px));
+	overflow: hidden;
+	position: relative;
+}
+
+.site-hero-bg {
+	background: #4a5565;
+	background-position: center;
+	background-size: cover;
+	inset: 0;
+	opacity: 0.32;
+	position: absolute;
+}
+
+.site-hero-content {
+	align-items: center;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1.1fr 1fr;
+	min-height: min(900px, calc(100vh - 70px));
+	position: relative;
+	z-index: 1;
+}
+
+.site-hero-image-wrap {
+	display: flex;
+	justify-content: center;
+	padding: clamp(2.5rem, 7vw, 6.25rem) 0;
+}
+
+.site-hero-image {
+	animation: siteHeroImageSpin 130s linear infinite;
+	animation-direction: alternate;
+	max-width: min(75%, 520px);
+	object-fit: contain;
+	width: 100%;
+}
+
+@keyframes siteHeroImageSpin {
+	0% {
+		transform: rotate(-360deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.site-hero-image {
+		animation: none;
+	}
+}
+
+.site-hero-copy h1 {
+	color: #2a353d;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: clamp(2rem, 4vw, 3.4rem);
+	font-weight: 500;
+	line-height: 1.05;
+	margin: 0;
+	max-width: 580px;
+}
+
+.site-hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+.site-primary-btn,
+.site-secondary-btn,
+.site-icon-btn {
+	align-items: center;
+	border: 1px solid transparent;
+	cursor: pointer;
+	display: flex;
+	font-family: inherit;
+	font-size: 0.83rem;
+	font-weight: 500;
+	gap: 0.45rem;
+	height: 42px;
+	padding: 0 1rem;
+}
+
+.site-primary-btn {
+	background: #9e371a;
+	color: #fff;
+}
+
+.site-primary-btn:hover,
+.site-primary-btn:focus-visible {
+	background: #7d2c15;
+}
+
+.site-secondary-btn {
+	background: #f9fafb;
+	border-color: #e5e7eb;
+	color: #4a5565;
+}
+
+.site-tertiary-btn {
+	background-color: transparent;
+	border: 1.8px solid #9E371A;
+	color: #9E371A;
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	font-family: inherit;
+	font-size: 0.83rem;
+	font-weight: 500;
+	gap: 0.45rem;
+	height: 42px;
+	padding: 0 1rem;
+	border-radius: 6px;
+}
+
+.site-icon-btn {
+	border-color: #9E371A;
+	color: #4a5565;
+	padding: 0 0.9rem;
+}
+
+.site-solutions,
+.site-partners,
+.site-testimonials,
+.site-faqs {
+	padding: clamp(2.8rem, 6vw, 4.25rem) 0;
+}
+
+.site-section-title-wrap {
+	margin: 0 auto 2rem;
+	max-width: 860px;
+	text-align: center;
+}
+
+.site-section-title-wrap h2,
+.site-partners h2,
+.site-testimonials h2,
+.site-faqs h2 {
+	color: #141b34;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: clamp(1.6rem, 2.4vw, 2.05rem);
+	font-weight: 500;
+	margin: 0;
+}
+
+.site-section-title-wrap p {
+	color: #4a5565;
+	font-size: 1.06rem;
+	margin: 1rem auto 0;
+	max-width: 760px;
+}
+
+.site-cards-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.solution-card {
+	background: #2d2d2d;
+	color: #fff;
+	min-height: 210px;
+	padding: 2rem 1.2rem;
+	position: relative;
+}
+
+.solution-card h3 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0.5rem 0 0.7rem;
+}
+
+.solution-card p {
+	color: #d2d2d2;
+	font-size: 14px;
+	line-height: 1.45;
+	margin: 0;
+}
+
+.site-partners {
+	text-align: center;
+}
+
+.partner-row {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: center;
+	margin-top: 1.4rem;
+}
+
+.partner-pill {
+	color: #4a5565;
+	font-size: 0.8rem;
+	font-weight: 500;
+	padding: 0.55rem 1rem;
+}
+
+.site-testimonials {
+	background: #eee8e2;
+	text-align: center;
+}
+
+.testimonials-subtitle {
+	color: #6b7280;
+	font-size: 0.87rem;
+	margin: 0.55rem 0 1.5rem;
+}
+
+.testimonial-sec {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 1rem;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	-webkit-overflow-scrolling: touch;
+}
+
+.testimonial-sec::-webkit-scrollbar {
+	display: none;
+}
+
+.testimonial-card {
+	background: #fff;
+	flex: 0 0 clamp(220px, 28vw, 280px);
+	padding: 1rem;
+	scroll-snap-align: start;
+	text-align: left;
+}
+
+.testimonial-image {
+	border-radius: 50%;
+	height: 30px;
+	object-fit: cover;
+	width: 30px;
+}
+
+.testimonial-card p {
+	color: #4b5563;
+	font-size: 0.82rem;
+	line-height: 1.45;
+	margin: 0 0 1rem;
+}
+
+.testimonial-card strong {
+	display: block;
+	font-size: 0.84rem;
+	font-weight: 600;
+}
+
+.testimonial-card span {
+	color: #6b7280;
+	font-size: 0.74rem;
+}
+
+.faq-wrap {
+	max-width: 840px;
+	text-align: center;
+}
+
+.faq-item {
+	border-bottom: 1px solid #e5e7eb;
+	padding: 0.85rem 0;
+	text-align: left;
+}
+
+.faq-item summary {
+	color: #111827;
+	cursor: pointer;
+	font-size: clamp(1rem, 1.3vw, 1.125rem);
+	font-weight: 500;
+	list-style: none;
+	padding-right: 1.25rem;
+	position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
+.faq-item summary::after {
+	align-items: center;
+	background-color: #9e371a;
+	border-radius: 999px;
+	color: #fff;
+	content: "+";
+	display: flex;
+	font-weight: 700;
+	height: 20px;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+}
+
+.faq-item[open] summary::after {
+	align-items: center;
+	content: "-";
+	display: flex;
+	justify-content: center;
+}
+
+.faq-item p {
+	color: #4b5563;
+	font-size: 0.9rem;
+	margin: 0.7rem 0 0;
+}
+
+@media (max-width: 1200px) {
+	.site-cards-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 992px) {
+	.site-cards-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.site-hero-content {
+		grid-template-columns: 1fr;
+		min-height: auto;
+		padding-bottom: 2.4rem;
+		padding-top: 2.4rem;
+	}
+
+	.site-hero-copy {
+		text-align: center;
+	}
+
+	.site-hero-copy h1 {
+		margin: 0 auto;
+	}
+
+	.site-hero-actions {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.site-hero {
+		min-height: auto;
+	}
+
+	.site-hero-content {
+		grid-template-columns: 1fr;
+		padding-bottom: 2rem;
+		padding-top: 2rem;
+	}
+
+	.site-hero-copy {
+		text-align: center;
+	}
+
+	.site-hero-actions {
+		justify-content: center;
+	}
+
+	.site-cards-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.testimonial-card {
+		flex-basis: 75%;
+	}
+}
+
+@media (max-width: 540px) {
+	.site-cards-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.testimonial-card {
+		flex-basis: 88%;
+	}
+}
