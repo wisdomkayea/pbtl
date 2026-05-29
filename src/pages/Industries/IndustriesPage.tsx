@@ -1,11 +1,12 @@
 import INDUSTRIES_HERO_NETWORK_IMAGE from "../../assets/images/industries-hero-network.png";
 import INDUSTRIES_HERO_SHAPE from "../../assets/images/industries-hero-shape.svg";
 import INDUSTRIES_GRID_ENERGY_IMAGE from "../../assets/images/industries-grid-energy.png";
-import INDUSTRIES_GRID_MANUFACTURING_IMAGE from "../../assets/images/industries-grid-manufacturing.png";
+import INDUSTRIES_GRID_MANUFACTURING_IMAGE from "../../assets/images/industries-grid-manufacturing.jpg";
 import INDUSTRIES_GRID_FOOD_IMAGE from "../../assets/images/industries-grid-food.png";
 import INDUSTRIES_GRID_MARITIME_IMAGE from "../../assets/images/industries-grid-maritime.png";
 import INDUSTRIES_GRID_TECH_IMAGE from "../../assets/images/industries-grid-tech.png";
 import INDUSTRIES_GRID_INSURANCE_IMAGE from "../../assets/images/industries-grid-insurance.png";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./Industries.css";
 
 const INDUSTRIES_GRID_ITEMS = [
@@ -54,9 +55,11 @@ const INDUSTRIES_GRID_ITEMS = [
 ];
 
 function IndustriesPage() {
+	useScrollReveal();
+
 	return (
 		<>
-			<section className="industries-figma-hero" aria-label="Industries served by PBTL">
+			<section className="industries-figma-hero" aria-label="Industries served by PBTL" data-reveal="zoom">
 				<img
 					src={INDUSTRIES_HERO_SHAPE}
 					alt=""
@@ -65,7 +68,7 @@ function IndustriesPage() {
 				/>
 
 				<div className="container industries-figma-content">
-					<h1 className="industries-figma-title">
+					<h1 className="industries-figma-title" data-reveal data-reveal-delay="50">
 						<span>Powering Industries</span>
 						<span>
 							Through <span className="industries-figma-title-accent">Smart Business</span>
@@ -73,7 +76,7 @@ function IndustriesPage() {
 						<span>Technology</span>
 					</h1>
 
-					<p className="industries-figma-description">
+					<p className="industries-figma-description" data-reveal data-reveal-delay="120">
 						PBTL builds innovative solutions across engineering, technology, consultancy, and
 						enterprise operations helping businesses streamline processes, improve
 						performance, and scale with confidence.
@@ -83,15 +86,22 @@ function IndustriesPage() {
 						src={INDUSTRIES_HERO_NETWORK_IMAGE}
 						alt="Abstract digital network visualization"
 						className="industries-figma-network"
+						data-reveal="zoom"
+						data-reveal-delay="160"
 					/>
 				</div>
 			</section>
 
-			<section className="industries-figma-grid-section" aria-label="Industry solutions sectors">
+			<section className="industries-figma-grid-section" aria-label="Industry solutions sectors" data-reveal>
 				<div className="industries-figma-grid-wrap">
 					<div className="industries-figma-grid">
-						{INDUSTRIES_GRID_ITEMS.map((item) => (
-							<article className="industries-figma-card" key={item.title}>
+						{INDUSTRIES_GRID_ITEMS.map((item, index) => (
+							<article
+								className="industries-figma-card"
+								key={item.title}
+								data-reveal="zoom"
+								data-reveal-delay={String(70 + (index % 2) * 90)}
+							>
 								<img src={item.image} alt={item.title} className="industries-figma-card-image" />
 								<div
 									className="industries-figma-card-overlay"

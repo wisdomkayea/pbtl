@@ -22,6 +22,7 @@ import Tonna from "../../assets/images/tonna.jpeg";
 import Patience from "../../assets/images/patience.jpeg";
 import Daniel from "../../assets/images/daniel.png";
 import Victory from "../../assets/images/victory.jpeg";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./HomePage.css";
 
 
@@ -142,17 +143,19 @@ const FAQS = [
 ];
 
 function HomePage() {
+	useScrollReveal();
+
 	return (
 		<div className="site-home">
-			<section id="home" className="site-hero" aria-label="PBTL hero section">
+			<section id="home" className="site-hero" aria-label="PBTL hero section" data-reveal="zoom">
 				<div
 					className="site-hero-bg"
 				/>
 				<div className="container site-hero-content">
-					<div className="site-hero-image-wrap">
+					<div className="site-hero-image-wrap" data-reveal="left" data-reveal-delay="400">
 						<img src={HERO_BG} alt="Connected technology graphic" className="site-hero-image" />
 					</div>
-					<div className="site-hero-copy">
+					<div className="site-hero-copy" data-reveal="right" data-reveal-delay="400">
 						<h1>Your Business Technology Partners</h1>
 						<div className="site-hero-actions">
 							<button type="button" className="site-primary-btn">
@@ -169,9 +172,9 @@ function HomePage() {
 				</div>
 			</section>
 
-			<section className="site-solutions" id="industries">
+			<section className="site-solutions" id="industries" data-reveal>
 				<div className="container">
-					<div id="product" className="site-section-title-wrap">
+					<div id="product" className="site-section-title-wrap" data-reveal data-reveal-delay="40">
 						<h2>Empowering Enterprises with Intelligent Solutions</h2>
 						<p>
 							Our business technology services are designed to help businesses streamline
@@ -179,8 +182,13 @@ function HomePage() {
 						</p>
 					</div>
 					<div className="site-cards-grid">
-						{SOLUTIONS.map((solution) => (
-							<article key={solution.title} className="solution-card">
+						{SOLUTIONS.map((solution, index) => (
+							<article
+								key={solution.title}
+								className="solution-card"
+								data-reveal="zoom"
+								data-reveal-delay={String(50 + (index % 4) * 70)}
+							>
 								<img src={solution.icon} alt={`${solution.title} icon`} className="solution-icon" />
 								<h3>{solution.title}</h3>
 								<p>{solution.description}</p>
@@ -190,12 +198,17 @@ function HomePage() {
 				</div>
 			</section>
 
-			<section className="site-partners" aria-label="Our partners">
+			<section className="site-partners" aria-label="Our partners" data-reveal>
 				<div className="container">
-					<h2>Our Partners</h2>
+					<h2 data-reveal="left">Our Partners</h2>
 					<div className="partner-row">
-						{PARTNERS.map((partner) => (
-							<span key={partner} className="partner-pill">
+						{PARTNERS.map((partner, index) => (
+							<span
+								key={partner}
+								className="partner-pill"
+								data-reveal="zoom"
+								data-reveal-delay={String(20 + (index % 6) * 60)}
+							>
 								<img src={partner} alt="Partner logo" className="partner-logo" />
 							</span>
 						))}
@@ -203,13 +216,13 @@ function HomePage() {
 				</div>
 			</section>
 
-			<section className="site-testimonials" aria-label="Our testimonials">
+			<section className="site-testimonials" aria-label="Our testimonials" data-reveal>
 				<div className="container">
-					<h2>Our Testimonials</h2>
-					<p className="testimonials-subtitle">Hear what people are saying about PBTL and our products.</p>
+					<h2 data-reveal="left">Our Testimonials</h2>
+					<p className="testimonials-subtitle" data-reveal data-reveal-delay="50">Hear what people are saying about PBTL and our products.</p>
 					<div className="testimonial-sec">
-						{TESTIMONIALS.map((item) => (
-							<article key={item.name} className="testimonial-card">
+						{TESTIMONIALS.map((item, index) => (
+							<article key={item.name} className="testimonial-card" data-reveal="zoom" data-reveal-delay={String(60 + index * 80)}>
 								<img src={item.avatar} alt={`${item.name} profile picture`} className="testimonial-image" />
 								<p>{item.quote}</p>
 								<strong>{item.name}</strong>
@@ -220,11 +233,17 @@ function HomePage() {
 				</div>
 			</section>
 
-			<section className="site-faqs" aria-label="Frequently asked questions">
+			<section className="site-faqs" aria-label="Frequently asked questions" data-reveal>
 				<div className="container faq-wrap">
-					<h2>FAQs</h2>
+					<h2 data-reveal="left">FAQs</h2>
 					{FAQS.map((faq, index) => (
-						<details key={faq.question} open={index === 0} className="faq-item">
+						<details
+							key={faq.question}
+							open={index === 0}
+							className="faq-item"
+							data-reveal="right"
+							data-reveal-delay={String(50 + index * 70)}
+						>
 							<summary>{faq.question}</summary>
 							<p>{faq.answer}</p>
 						</details>

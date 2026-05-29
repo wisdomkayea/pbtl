@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap");
+
+@font-face {
+	font-family: "Aeonik";
+	src: url("../assets/font/Aeonik-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 100 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Aeonik";
+	src: url("../assets/font/Aeonik-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 600 900;
+	font-display: swap;
+}
 
 * {
 	box-sizing: border-box;
@@ -14,7 +30,7 @@ body,
 body {
 	background: var(--color-background);
 	color: var(--color-text);
-	font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Aeonik", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	line-height: 1.5;
 	overflow-x: hidden;
 }
@@ -248,7 +264,6 @@ a {
 
 .site-hero-bg {
 	background: #4a5565;
-	/* background-image: url("https://www.figma.com/api/mcp/asset/00f23b11-88c1-4f2e-8ed7-3dcfc151f3ce"); */
 	background-position: center;
 	background-size: cover;
 	inset: 0;
@@ -280,7 +295,7 @@ a {
 
 .site-hero-copy h1 {
 	color: #2a353d;
-	font-family: "Orbitron", "Inter", sans-serif;
+	font-family: "Orbitron", "Aeonik", sans-serif;
 	font-size: clamp(2rem, 4vw, 3.4rem);
 	font-weight: 500;
 	line-height: 1.05;
@@ -345,7 +360,7 @@ a {
 .site-testimonials h2,
 .site-faqs h2 {
 	color: #141b34;
-	font-family: "Orbitron", "Inter", sans-serif;
+	font-family: "Orbitron", "Aeonik", sans-serif;
 	font-size: clamp(1.6rem, 2.4vw, 2.05rem);
 	font-weight: 500;
 	margin: 0;
@@ -362,6 +377,47 @@ a {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+[data-reveal] {
+	opacity: 0;
+	filter: blur(6px);
+	transform: translate3d(0, 36px, 0) scale(0.985);
+	transition-delay: var(--reveal-delay, 0ms);
+	transition-duration: 760ms;
+	transition-property: opacity, transform, filter;
+	transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+	will-change: opacity, transform, filter;
+}
+
+[data-reveal="left"] {
+	transform: translate3d(-48px, 0, 0) scale(0.985);
+}
+
+[data-reveal="right"] {
+	transform: translate3d(48px, 0, 0) scale(0.985);
+}
+
+[data-reveal="zoom"] {
+	transform: translate3d(0, 28px, 0) scale(0.94);
+}
+
+[data-reveal].is-visible {
+	filter: blur(0);
+	opacity: 1;
+	transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	[data-reveal],
+	[data-reveal="left"],
+	[data-reveal="right"],
+	[data-reveal="zoom"] {
+		filter: none;
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
 }
 
 

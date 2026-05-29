@@ -1,12 +1,8 @@
-const CONTACT_SHAPE = "https://www.figma.com/api/mcp/asset/d9e60184-e755-4924-9830-56979b28ffb4";
 import "./Contact.css";
 
 function ContactUsPage() {
 	return (
 		<section className="contact-site-page" aria-label="Contact page">
-			<div className="contact-background-shape" aria-hidden="true">
-				<img src={CONTACT_SHAPE} alt="" />
-			</div>
 
 			<div className="container contact-site-container">
 				<div className="contact-site-intro">

@@ -1,10 +1,10 @@
 import ABOUT_PATTERN from "../../assets/images/about-pattern.png";
-const ABOUT_SHAPE = "https://www.figma.com/api/mcp/asset/6ed8c196-a71c-4077-a324-23de0d52f0e2";
 import VISION_IMAGE from "../../assets/images/vision.png";
 import MISSION_IMAGE from "../../assets/images/mission.png";
 const RING_LEFT = "../../assets/images/ring_left.png";
 const RING_RIGHT = "../../assets/images/ring_right.png";
 import { JusticeScale01Icon, ZapIcon, BulbIcon, TradeUpIcon } from "hugeicons-react";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./About.css";
 
 const STATS = [
@@ -34,18 +34,17 @@ const CORE_VALUES = [
 ];
 
 function AboutUsPage() {
+	useScrollReveal();
+
 	return (
 		<div className="about-bridge-page" aria-label="About PBTL">
-			<section className="about-bridge-hero">
+			<section className="about-bridge-hero" data-reveal="zoom">
 				<div
 					className="about-bridge-pattern"
 					style={{ backgroundImage: `url(${ABOUT_PATTERN})` }}
 					aria-hidden="true"
 				/>
-				<div className="about-bridge-shape" aria-hidden="true">
-					<img src={ABOUT_SHAPE} alt="" />
-				</div>
-				<div className="container about-bridge-hero-content">
+				<div className="container about-bridge-hero-content" data-reveal data-reveal-delay="70">
 					<h1>
 						We are the <span>Bridge</span> Between Business and Technology
 					</h1>
@@ -64,10 +63,10 @@ function AboutUsPage() {
 				</div>
 			</section>
 
-			<section className="about-bridge-stats" aria-label="Company statistics">
+			<section className="about-bridge-stats" aria-label="Company statistics" data-reveal>
 				<div className="container about-bridge-stats-grid">
-					{STATS.map((stat) => (
-						<div key={stat.label} className="about-stat-item">
+					{STATS.map((stat, index) => (
+						<div key={stat.label} className="about-stat-item" data-reveal="zoom" data-reveal-delay={String(60 + index * 80)}>
 							<p className="about-stat-value">{stat.value}</p>
 							<p className="about-stat-label">{stat.label}</p>
 						</div>
@@ -75,18 +74,18 @@ function AboutUsPage() {
 				</div>
 			</section>
 
-			<section className="about-bridge-mission-vision">
+			<section className="about-bridge-mission-vision" data-reveal>
 				<div className="container about-bridge-mv-wrap">
 					<img src={RING_LEFT} className="about-ring-left" alt="" aria-hidden="true" />
 					<img src={RING_RIGHT} className="about-ring-right" alt="" aria-hidden="true" />
 					{/* <img src={RING_LEFT} className="about-bridge-ring about-bridge-ring-left" alt="" aria-hidden="true" />
 					<img src={RING_RIGHT} className="about-bridge-ring about-bridge-ring-right" alt="" aria-hidden="true" /> */}
 
-					<div className="about-bridge-row about-bridge-row-vision">
-						<div className="about-bridge-image-wrap">
+					<div className="about-bridge-row about-bridge-row-vision" data-reveal>
+						<div className="about-bridge-image-wrap" data-reveal="left">
 							<img src={VISION_IMAGE} alt="Hand holding a magnifier"/>
 						</div>
-						<div className="about-bridge-text-wrap">
+						<div className="about-bridge-text-wrap" data-reveal="right" data-reveal-delay="80">
 							<h2>Vision</h2>
 							<p>
 								To emerge as a leading technology services provider distinguished by our
@@ -95,8 +94,8 @@ function AboutUsPage() {
 						</div>
 					</div>
 
-					<div className="about-bridge-row about-bridge-row-mission">
-						<div className="about-bridge-text-wrap">
+					<div className="about-bridge-row about-bridge-row-mission" data-reveal>
+						<div className="about-bridge-text-wrap" data-reveal="left">
 							<h2>Mission</h2>
 							<p>
 								To drive the future of commerce by seamlessly integrating advanced technology
@@ -104,16 +103,21 @@ function AboutUsPage() {
 								competitive advantage.
 							</p>
 						</div>
-						<div className="about-bridge-image-wrap">
+						<div className="about-bridge-image-wrap" data-reveal="right" data-reveal-delay="80">
 							<img src={MISSION_IMAGE} alt="Ladder toward a target" />
 						</div>
 					</div>
 
-					<div className="about-bridge-core-values">
-						<h2>Core Values</h2>
+					<div className="about-bridge-core-values" data-reveal>
+						<h2 data-reveal="left">Core Values</h2>
 						<div className="about-bridge-values-grid">
-							{CORE_VALUES.map((value) => (
-								<div key={value.label} className="about-value-chip">
+							{CORE_VALUES.map((value, index) => (
+								<div
+									key={value.label}
+									className="about-value-chip"
+									data-reveal="zoom"
+									data-reveal-delay={String(50 + index * 70)}
+								>
 									<span className="about-value-icon" aria-hidden="true">
 										{value.icon}
 									</span>
