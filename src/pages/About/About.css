@@ -4,9 +4,9 @@
 
 .about-bridge-hero {
 	background: #2d2d2d;
-	min-height: 670px;
+	min-height: 600px;
 	overflow: hidden;
-	padding: 4.5rem 0 0;
+	padding: 72px 0;
 	position: relative;
 }
 
@@ -15,12 +15,12 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	inset: 0;
-	opacity: 0.22;
+	opacity: 1;
 	position: absolute;
 }
 
 .about-bridge-shape {
-	left: max(1rem, calc(50% - 610px));
+	left: max(16px, calc(50% - 610px));
 	position: absolute;
 	top: 0;
 	width: 260px;
@@ -45,10 +45,10 @@
 .about-bridge-hero-content h1 {
 	color: #ffffff;
 	font-family: "Orbitron", "Inter", sans-serif;
-	font-size: clamp(2.25rem, 5.6vw, 4rem);
+	font-size: clamp(36px, 5.6vw, 64px);
 	font-weight: 400;
 	line-height: 1.2;
-	margin: 2.6rem 0 1.2rem;
+	margin: 41.6px 0 19.2px;
 }
 
 .about-bridge-hero-content h1 span {
@@ -62,32 +62,32 @@
 
 .about-bridge-lead-copy p {
 	color: #f2f4f7;
-	font-size: clamp(0.98rem, 1.3vw, 1.25rem);
+	font-size: 16px;
 	line-height: 1.5;
 	margin: 0;
 }
 
 .about-bridge-lead-copy p + p {
-	margin-top: 1.2rem;
+	margin-top: 19.2px;
 }
 
 .about-bridge-stats {
 	background: #ffffff;
-	padding: 2.8rem 0;
+	padding: 44.8px 0;
 }
 
 .about-bridge-stats-grid {
 	display: grid;
-	gap: 1.8rem;
+	gap: 28.8px;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	max-width: 980px;
-	padding-bottom: 0.45rem;
-	padding-top: 0.35rem;
+	padding-bottom: 7.2px;
+	padding-top: 5.6px;
 }
 
 .about-stat-item {
 	border-right: 1px solid #e5e7eb;
-	padding-right: 0.8rem;
+	padding-right: 12.8px;
 }
 
 .about-stat-item:last-child {
@@ -98,14 +98,14 @@
 .about-stat-value {
 	color: #101828;
 	font-family: "Orbitron", "Inter", sans-serif;
-	font-size: 2rem;
+	font-size: 36px;
 	line-height: 1;
-	margin: 0 0 0.6rem;
+	margin: 0 0 9.6px;
 }
 
 .about-stat-label {
 	color: #101828;
-	font-size: 0.92rem;
+	font-size: 14px;
 	line-height: 1.5;
 	margin: 0;
 	max-width: 145px;
@@ -113,7 +113,7 @@
 
 .about-bridge-mission-vision {
 	background: #f3f4f6;
-	padding: 5.2rem 0 3.3rem;
+	padding: 83.2px 0 52.8px;
 	position: relative;
 }
 
@@ -129,12 +129,26 @@
 	z-index: 10;
 }
 
+/* .about-ring-right {
+	background-color: red;
+	top: 390px;
+	z-index: 100;
+}
+
+.about-ring-left {
+	position: absolute;
+	background-color: red;
+} */
+
 .about-bridge-ring-left {
+	opacity: 1;
 	left: -50px;
 	top: 290px;
 }
 
 .about-bridge-ring-right {
+	background-color: red;
+	opacity: 1;
 	right: -50px;
 	top: 720px;
 }
@@ -142,14 +156,14 @@
 .about-bridge-row {
 	align-items: center;
 	display: grid;
-	gap: 1.35rem;
+	gap: 21.6px;
 	grid-template-columns: 1fr 1fr;
 	position: relative;
 	z-index: 1;
 }
 
 .about-bridge-row + .about-bridge-row {
-	margin-top: 4.7rem;
+	margin-top: 75.2px;
 }
 
 .about-bridge-image-wrap {
@@ -168,20 +182,20 @@
 .about-bridge-core-values h2 {
 	color: #101828;
 	font-family: "Orbitron", "Inter", sans-serif;
-	font-size: 1.8rem;
+	font-size: 28.8px;
 	font-weight: 500;
-	margin: 0 0 0.9rem;
+	margin: 0 0 14.4px;
 }
 
 .about-bridge-text-wrap p {
 	color: #4a5565;
-	font-size: clamp(1rem, 1.3vw, 1.25rem);
+	font-size: clamp(16px, 1.3vw, 20px);
 	line-height: 1.6;
 	margin: 0;
 }
 
 .about-bridge-core-values {
-	margin-top: 4.4rem;
+	margin-top: 70.4px;
 	position: relative;
 	text-align: center;
 	z-index: 1;
@@ -189,18 +203,18 @@
 
 .about-bridge-values-grid {
 	display: grid;
-	gap: 1rem;
+	gap: 16px;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
-	margin-top: 1.2rem;
+	margin-top: 19.2px;
 }
 
 .about-value-chip {
 	align-items: center;
 	display: inline-flex;
-	gap: 0.5rem;
+	gap: 8px;
 	justify-content: center;
 	min-height: 40px;
-	padding: 0.35rem 0.2rem;
+	padding: 5.6px 3.2px;
 	white-space: nowrap;
 }
 
@@ -210,7 +224,7 @@
 	border-radius: 999px;
 	color: #9e371a;
 	display: inline-flex;
-	font-size: 1rem;
+	font-size: 16px;
 	height: 38px;
 	justify-content: center;
 	line-height: 1;
@@ -219,21 +233,21 @@
 
 .about-value-chip span:last-child {
 	color: #101828;
-	font-size: 1rem;
+	font-size: 16px;
 }
 
 .about-site-page {
 	background: #ececec;
 	min-height: calc(100vh - 140px);
 	overflow: hidden;
-	padding: 2.5rem 0 4.75rem;
+	padding: 40px 0 76px;
 	position: relative;
 }
 
 .about-background-shape {
 	left: 7%;
 	position: absolute;
-	top: 0.5rem;
+	top: 8px;
 	width: min(260px, 35vw);
 	z-index: 0;
 }
@@ -253,9 +267,9 @@
 .about-site-gallery {
 	align-items: flex-end;
 	display: flex;
-	gap: 0.65rem;
+	gap: 10.4px;
 	justify-content: center;
-	margin: 1.2rem auto 1.1rem;
+	margin: 19.2px auto 17.6px;
 	min-height: 365px;
 	width: 100%;
 }
@@ -304,19 +318,19 @@
 	border-bottom: 1px solid #d8dde5;
 	color: #101828;
 	font-family: "Orbitron", "Inter", sans-serif;
-	font-size: clamp(2rem, 5vw, 3.4rem);
+	font-size: clamp(32px, 5vw, 54.4px);
 	font-weight: 500;
 	letter-spacing: 0.005em;
 	line-height: 1.18;
 	margin: 0;
-	padding: 0 0 0.7rem;
+	padding: 0 0 11.2px;
 }
 
 .about-site-copy p {
 	color: #4a5565;
-	font-size: clamp(1rem, 1.4vw, 2rem);
+	font-size: clamp(16px, 1.4vw, 32px);
 	line-height: 1.45;
-	margin: 0.95rem 0 0;
+	margin: 15.2px 0 0;
 	max-width: 1000px;
 }
 
@@ -336,8 +350,8 @@
 
 @media (max-width: 768px) {
 	.about-bridge-hero {
-		min-height: 780px;
-		padding-top: 1.8rem;
+		min-height: 540px;
+		padding: 28.8px 0;
 	}
 
 	.about-bridge-shape {
@@ -347,15 +361,40 @@
 	}
 
 	.about-bridge-stats-grid {
-		gap: 1.2rem;
+		gap: 19.2px;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.about-stat-value {
+	color: #101828;
+	font-family: "Orbitron", "Inter", sans-serif;
+	font-size: 24px;
+	line-height: 1;
+	margin: 0 0 9.6px;
+	}
+
+	.about-stat-label {
+		color: #101828;
+		font-size: 12px;
+		line-height: 1.5;
+		margin: 0;
+		max-width: 145px;
 	}
 
 	.about-stat-item {
 		border-right: 0;
 		border-top: 1px solid #e5e7eb;
 		padding-right: 0;
-		padding-top: 0.9rem;
+		padding-top: 14.4px;
+	}
+
+	.about-bridge-text-wrap h2,
+	.about-bridge-core-values h2 {
+		font-size: 24px;
+	}
+
+	.about-bridge-text-wrap p {
+		font-size: 14px;
 	}
 
 	.about-stat-item:nth-child(-n + 2) {
@@ -376,23 +415,27 @@
 	}
 
 	.about-bridge-values-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		flex-direction: column;
+	}
+
+	.about-value-chip {
+		align-items: center;
 	}
 
 	.about-site-page {
-		padding-top: 1.4rem;
+		padding-top: 22.4px;
 	}
 
 	.about-background-shape {
-		left: -3rem;
-		top: 2.2rem;
+		left: -48px;
+		top: 35.2px;
 		width: 180px;
 	}
 
 	.about-site-gallery {
 		justify-content: flex-start;
 		overflow-x: auto;
-		padding-bottom: 0.5rem;
+		padding-bottom: 8px;
 		scrollbar-width: none;
 	}
 
@@ -416,19 +459,19 @@
 	}
 
 	.about-site-copy p {
-		font-size: 1.05rem;
+		font-size: 16.8px;
 	}
 }
 
 @media (max-width: 540px) {
 	.about-bridge-stats-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.about-stat-item,
-	.about-stat-item:nth-child(-n + 2) {
+	.about-stat-item:nth-child(-n + 1) {
 		border-top: 1px solid #e5e7eb;
-		padding-top: 0.75rem;
+		padding-top: 12px;
 	}
 
 	.about-stat-item:first-child {
@@ -437,10 +480,24 @@
 	}
 
 	.about-bridge-hero-content h1 {
-		font-size: clamp(1.95rem, 9vw, 2.8rem);
+		font-size: clamp(31.2px, 9vw, 44.8px);
 	}
-
+	
+	.about-bridge-lead-copy p {
+		color: #f2f4f7;
+		font-size: 14px;
+		line-height: 1.5;
+		margin: 0;
+	}
 	.about-bridge-values-grid {
-		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 12px;
+		justify-content: center;
+		grid-template-columns: none;
+	}
+	.about-value-label{
+		font-size: 14px !important;
 	}
 }

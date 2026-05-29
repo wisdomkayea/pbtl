@@ -43,11 +43,13 @@ function RequestQuotePage() {
 						<input id="requestEmail" name="email" type="email" />
 					</div>
 
-					<div className="request-quote-field request-quote-field-select">
+					<div className="request-quote-field request-quote-field-line">
 						<label htmlFor="requestProduct">
 							Products <span>*</span>
 						</label>
-						<select id="requestProduct" name="product" defaultValue="">
+						<textarea id="requestProduct" name="product" rows={1} />
+						 
+						{/* <select id="requestProduct" name="product" defaultValue="">
 							<option value="" disabled hidden>
 								Select a product
 							</option>
@@ -56,7 +58,7 @@ function RequestQuotePage() {
 							<option value="finance">Finance Suite</option>
 							<option value="audit">Audit and Compliance</option>
 							<option value="procurement">Procurement</option>
-						</select>
+						</select> */}
 					</div>
 
 					<div className="request-quote-field request-quote-field-line">

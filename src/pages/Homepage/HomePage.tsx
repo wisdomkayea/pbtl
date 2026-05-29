@@ -18,6 +18,10 @@ import Asca from "../../assets/images/company1.png";
 import FlowGrid from "../../assets/images/company5.png";
 import Fn from "../../assets/images/company8.png";
 import Gmt from "../../assets/images/company6.png";
+import Tonna from "../../assets/images/tonna.jpeg";
+import Patience from "../../assets/images/patience.jpeg";
+import Daniel from "../../assets/images/daniel.png";
+import Victory from "../../assets/images/victory.jpeg";
 import "./HomePage.css";
 
 
@@ -87,72 +91,60 @@ const PARTNERS = [
 
 const TESTIMONIALS = [
 	{
-		avatar: "https://randomuser.me/api/portraits/women/1.jpg",
-		name: "Pamela M.",
-		role: "UX Designer",
+		avatar: Patience,
+		name: "Patience",
+		role: "Finance",
 		quote:
-			"From onboarding to daily operations, the platform adapts perfectly to our workflow."
+			"Represents E3OS Finance and other Unified Experiences."
 	},
 	{
-		avatar: "https://randomuser.me/api/portraits/men/2.jpg",
-		name: "Precious N.",
-		role: "Engineer",
-		quote: "The recruitment and HR modules have reduced our admin overhead significantly."
+		avatar: Daniel,
+		name: "Daniel",
+		role: "Training",
+		quote: "Represents LMS and its Functions"
 	},
 	{
-		avatar: "https://randomuser.me/api/portraits/men/3.jpg",
-		name: "Philip D.",
-		role: "Operations",
-		quote: "Visibility across teams improved from week one. The tools are practical and fast."
+		avatar: Tonna,
+		name: "Tonna",
+		role: "Project Manager",
+		quote: "Represents E3OS and Its Processes"
 	},
 	{
-		avatar: "https://randomuser.me/api/portraits/women/4.jpg",
-		name: "Pamela B.",
+		avatar: Victory,
+		name: "Victory",
 		role: "HR Manager",
-		quote: "Everything we need for people operations is now in one clean, connected place."
+		quote: "Represents CMVP and all record"
 	},
-	{
-		avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-		name: "John S.",
-		role: "Developer",
-		quote: "The platform has streamlined our development process and improved collaboration."
-	},
-	{
-		avatar: "https://randomuser.me/api/portraits/women/6.jpg",
-		name: "Alice M.",
-		role: "Product Manager",
-		quote: "The platform has significantly improved our product management processes."
-	}
 ];
 
 const FAQS = [
 	{
-		question: "What is PBTL?",
+		question: "How do I get started with PBTL?",
 		answer:
-			"PBTL delivers enterprise business technology solutions designed to optimize operations and support sustainable growth."
+			"Contact our team through the website form, email, or phone. We will schedule a consultation to understand your needs and propose the right solution."
 	},
 	{
-		question: "Who can use the E3OS platform?",
-		answer: "Healthcare, finance, operations, and people teams can all use E3OS modules."
+		question: "What is your approach to data security and compliance?",
+		answer: "We integrate robust cybersecurity measures, regulatory compliance tools, and secure data management practices into all our solutions."
 	},
 	{
-		question: "Can modules be deployed independently?",
-		answer: "Yes. You can implement one module at a time or roll out the full suite."
+		question: "Are your solutions customizable?",
+		answer: "Yes. We tailor our solutions to meet specific industry requirements, compliance standards, and unique business needs."
 	},
 	{
-		question: "Do you provide onboarding support?",
-		answer: "Yes. We provide guided onboarding, product training, and ongoing support."
+		question: "Do you offer solutions for HR and recruitment?",
+		answer: "Yes. Our E3OS-HR and E3OS-Recruitment systems help organizations manage workforce processes, rostering, compliance, and talent acquisition more effectively."
 	},
 	{
-		question: "How do I request a demo?",
-		answer: "Use the Request a Quote action in the navbar or contact page to get started."
+		question: "How can PBTL help my business?",
+		answer: "We design and implement scalable technology solutions that streamline operations, enhance decision-making, reduce risks, and drive long-term business growth."
 	}
 ];
 
 function HomePage() {
 	return (
 		<div className="site-home">
-			<section className="site-hero" aria-label="PBTL hero section">
+			<section id="home" className="site-hero" aria-label="PBTL hero section">
 				<div
 					className="site-hero-bg"
 				/>

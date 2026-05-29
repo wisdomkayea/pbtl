@@ -1,12 +1,12 @@
 .contact-site-page {
 	background: #f3f4f6;
 	min-height: calc(100vh - 140px);
-	padding: 5.1rem 0 4rem;
+	padding: 81.6px 0;
 	position: relative;
 }
 
 .contact-background-shape {
-	left: max(1rem, calc(50% - 610px));
+	left: max(16px, calc(50% - 610px));
 	position: absolute;
 	top: 0;
 	width: 260px;
@@ -21,7 +21,7 @@
 
 .contact-site-container {
 	display: grid;
-	gap: 8rem;
+	gap: 128px;
 	grid-template-columns: minmax(0, 415px) minmax(0, 414px);
 	justify-content: center;
 	position: relative;
@@ -31,10 +31,10 @@
 .contact-site-intro h1 {
 	color: #101828;
 	font-family: "Orbitron", "Inter", sans-serif;
-	font-size: clamp(2.8rem, 5vw, 4.5rem);
+	font-size: clamp(44.8px, 5vw, 72px);
 	font-weight: 400;
 	line-height: 1.04;
-	margin: 0 0 1.7rem;
+	margin: 0 0 27.2px;
 }
 
 .contact-site-intro p {
@@ -48,28 +48,28 @@
 .contact-site-form {
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 24px;
 }
 
 .contact-site-row-two {
 	display: grid;
-	gap: 1.25rem;
+	gap: 20px;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .contact-site-field {
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
+	gap: 19.2px;
 }
 
 .contact-site-field label {
 	align-items: center;
 	color: #101828;
 	display: inline-flex;
-	font-size: 0.875rem;
+	font-size: 14px;
 	font-weight: 500;
-	gap: 0.15rem;
+	gap: 2.4px;
 	line-height: 1.35;
 }
 
@@ -86,10 +86,10 @@
 	border-radius: 0;
 	color: #101828;
 	font-family: inherit;
-	font-size: 0.95rem;
+	font-size: 15.2px;
 	line-height: 1.4;
 	outline: none;
-	padding: 0 0 0.4rem;
+	padding: 0 0 6.4px;
 	resize: none;
 	width: 100%;
 }
@@ -104,10 +104,10 @@
 	border: 0;
 	color: #ffffff;
 	cursor: pointer;
-	font-size: 0.875rem;
+	font-size: 14px;
 	font-weight: 500;
 	height: 40px;
-	padding: 0 1.1rem;
+	padding: 0 17.6px;
 	width: fit-content;
 }
 
@@ -118,16 +118,20 @@
 
 @media (max-width: 1200px) {
 	.contact-site-container {
-		gap: 3.2rem;
+		gap: 51.2px;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
 
 	.contact-site-intro p {
-		font-size: 1rem;
+		font-size: 16px;
 	}
 }
 
 @media (max-width: 992px) {
+
+	.contact-site-page {
+	 padding: 81.6px 8px;
+	}
 	.contact-site-container {
 		grid-template-columns: 1fr;
 	}
@@ -135,26 +139,27 @@
 
 @media (max-width: 768px) {
 	.contact-site-page {
-		padding-top: 2.2rem;
+		padding-top: 35.2px;
 	}
 
 	.contact-background-shape {
 		left: -24px;
-		top: 0.8rem;
+		top: 12.8px;
 		width: 185px;
 	}
 
 	.contact-site-container {
-		gap: 2.4rem;
+		gap: 38.4px;
 		grid-template-columns: 1fr;
 	}
 
 	.contact-site-intro h1 {
-		margin-bottom: 1rem;
+		font-size: 34px;
+		margin-bottom: 16px;
 	}
 
 	.contact-site-intro p {
-		font-size: 1.05rem;
+		font-size: 14px;
 		max-width: 680px;
 	}
 
@@ -163,6 +168,6 @@
 	}
 
 	.contact-site-form {
-		gap: 1.8rem;
+		gap: 28.8px;
 	}
 }

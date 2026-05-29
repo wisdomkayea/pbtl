@@ -122,17 +122,20 @@
 	border-radius: 6px;
 }
 
-.site-icon-btn {
-	border-color: #9E371A;
-	color: #4a5565;
-	padding: 0 0.9rem;
+.site-tertiary-btn:hover{
+	background-color: #9E371A;
+	color: #fff;
 }
+
 
 .site-solutions,
 .site-partners,
-.site-testimonials,
-.site-faqs {
+.site-testimonials {
 	padding: clamp(2.8rem, 6vw, 4.25rem) 0;
+}
+
+.site-faqs {
+	padding: 40px 200px;
 }
 
 .site-section-title-wrap {
@@ -252,7 +255,7 @@
 	color: #4b5563;
 	font-size: 0.82rem;
 	line-height: 1.45;
-	margin: 0 0 1rem;
+	margin: 10px 0 1rem;
 }
 
 .testimonial-card strong {
@@ -374,8 +377,23 @@
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
+	.partner-pill {
+	color: #4a5565;
+	font-size: 0.8rem;
+	font-weight: 500;
+	padding: 0.5rem 0rem;
+}
+
 	.testimonial-card {
-		flex-basis: 75%;
+		flex: 0 0 clamp(220px, 18vw, 200px);
+	}
+
+	.site-testimonials {
+		padding: 40px 20px;
+	}
+	
+	.site-faqs {
+	padding: 40px 40px;
 	}
 }
 
@@ -385,6 +403,7 @@
 	}
 
 	.testimonial-card {
-		flex-basis: 88%;
+		flex: 0 0 clamp(220px, 18vw, 200px);
 	}
+
 }

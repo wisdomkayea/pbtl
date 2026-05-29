@@ -138,7 +138,7 @@
 
 @media (max-width: 900px) {
 	.request-quote-page {
-		padding-top: 2rem;
+	 padding: 2rem 8px;
 	}
 
 	.request-quote-form {

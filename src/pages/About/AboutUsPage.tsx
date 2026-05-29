@@ -1,4 +1,4 @@
-const ABOUT_PATTERN = "https://www.figma.com/api/mcp/asset/08831fa3-ae04-4f53-9457-71bc13f06122";
+import ABOUT_PATTERN from "../../assets/images/about-pattern.png";
 const ABOUT_SHAPE = "https://www.figma.com/api/mcp/asset/6ed8c196-a71c-4077-a324-23de0d52f0e2";
 import VISION_IMAGE from "../../assets/images/vision.png";
 import MISSION_IMAGE from "../../assets/images/mission.png";
@@ -77,12 +77,14 @@ function AboutUsPage() {
 
 			<section className="about-bridge-mission-vision">
 				<div className="container about-bridge-mv-wrap">
-					<img src={RING_LEFT} className="about-bridge-ring about-bridge-ring-left" alt="" aria-hidden="true" />
-					<img src={RING_RIGHT} className="about-bridge-ring about-bridge-ring-right" alt="" aria-hidden="true" />
+					<img src={RING_LEFT} className="about-ring-left" alt="" aria-hidden="true" />
+					<img src={RING_RIGHT} className="about-ring-right" alt="" aria-hidden="true" />
+					{/* <img src={RING_LEFT} className="about-bridge-ring about-bridge-ring-left" alt="" aria-hidden="true" />
+					<img src={RING_RIGHT} className="about-bridge-ring about-bridge-ring-right" alt="" aria-hidden="true" /> */}
 
 					<div className="about-bridge-row about-bridge-row-vision">
 						<div className="about-bridge-image-wrap">
-							<img src={VISION_IMAGE} alt="Hand holding a magnifier" />
+							<img src={VISION_IMAGE} alt="Hand holding a magnifier"/>
 						</div>
 						<div className="about-bridge-text-wrap">
 							<h2>Vision</h2>
@@ -115,7 +117,7 @@ function AboutUsPage() {
 									<span className="about-value-icon" aria-hidden="true">
 										{value.icon}
 									</span>
-									<span>{value.label}</span>
+									<span className="about-value-label">{value.label}</span>
 								</div>
 							))}
 						</div>
