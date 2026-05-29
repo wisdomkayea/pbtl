@@ -24,6 +24,7 @@ import Daniel from "../../assets/images/daniel.png";
 import Victory from "../../assets/images/victory.jpeg";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./HomePage.css";
+import { Link } from "react-router-dom";
 
 
 const SOLUTIONS = [
@@ -159,10 +160,10 @@ function HomePage() {
 						<h1>Your Business Technology Partners</h1>
 						<div className="site-hero-actions">
 							<button type="button" className="site-primary-btn">
-								<a href="#product">Explore Products</a>
+								<Link to="#product">Explore Products</Link>
 							</button>
 							<button type="button" className="site-secondary-btn">
-								<a href="/industries">Explore Industries</a>
+								<Link to="/industries">Explore Industries</Link>
 							</button>
 							<button type="button" className="site-tertiary-btn" aria-label="Download brochure">
 								<FolderDownloadIcon size={20} />
