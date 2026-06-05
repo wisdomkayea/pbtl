@@ -145,7 +145,6 @@ const FAQS = [
 
 function HomePage() {
 	useScrollReveal();
-
 	return (
 		<div className="site-home">
 			<section id="home" className="site-hero" aria-label="PBTL hero section" data-reveal="zoom">

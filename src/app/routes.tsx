@@ -5,6 +5,7 @@ import ContactUsPage from "../pages/Contact/ContactUsPage";
 import HomePage from "../pages/Homepage/HomePage";
 import IndustriesPage from "../pages/Industries/IndustriesPage";
 import RequestQuotePage from "../pages/RequestQuote/RequestQuote";
+import ServicesPage from "../pages/Services/Services";
 
 export const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
 			{
 				path: "industries",
 				element: <IndustriesPage />
+			},
+			{
+				path: "services",
+				element: <ServicesPage />
 			},
 			{
 				path: "about",

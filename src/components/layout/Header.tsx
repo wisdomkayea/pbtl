@@ -61,6 +61,17 @@ function Header() {
 							</li>
 							<li>
 								<NavLink
+									to="/services"
+									onClick={() => setIsMenuOpen(false)}
+									className={({ isActive }) =>
+										`nav-link site-nav-link ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
+									}
+								>
+									Services
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
 									to="/contact"
 									onClick={() => setIsMenuOpen(false)}
 									className={({ isActive }) =>
