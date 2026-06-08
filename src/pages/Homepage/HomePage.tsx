@@ -1,4 +1,3 @@
-import { FolderDownloadIcon, HardDriveIcon } from "hugeicons-react";
 import HERO_BG from	"../../assets/images/hero_img.png";
 import Care from "../../assets/images/Care Admin Icon.png";
 import Recruitment from "../../assets/images/Recruitment Icon.png";
@@ -10,14 +9,8 @@ import Assets  from "../../assets/images/Assetsmanagement 1.png";
 import Finance  from "../../assets/images/Finance.png";
 import Procurement  from "../../assets/images/Procurement.png";
 import CMVP  from "../../assets/images/Audit-Compiance 1.png";
-import Sobaz from "../../assets/images/company4.png";
-import Aradel from "../../assets/images/company3.png";
-import Seplat from "../../assets/images/company2.png";
-import CenGlobal from "../../assets/images/company7.png";
-import Asca from "../../assets/images/company1.png";
-import FlowGrid from "../../assets/images/company5.png";
-import Fn from "../../assets/images/company8.png";
-import Gmt from "../../assets/images/company6.png";
+import Proliance from "../../assets/images/proliance.png";
+import E3OS from "../../assets/images/E3OS.png";
 import Tonna from "../../assets/images/tonna.jpeg";
 import Patience from "../../assets/images/patience.jpeg";
 import Daniel from "../../assets/images/daniel.png";
@@ -31,7 +24,7 @@ const SOLUTIONS = [
 	{
 		icon: Care,
 		title: "E3OS Care Administrator",
-		description: "Stay in control of care delivery, team coordination, and daily operations."
+		description: "Stay in control of care delivery, team coordination, and daily operations based on compliance."
 	},
 	{
 		icon: Recruitment,
@@ -40,7 +33,7 @@ const SOLUTIONS = [
 	},
 	{
 		icon: Document,
-		title: "E3OS Document Management",
+		title: "PRO DMS",
 		description: "Organize your documents, stay compliant, and work with confidence."
 	},
 	{
@@ -50,7 +43,7 @@ const SOLUTIONS = [
 	},
 	{
 		icon: Workflow,
-		title: "E3OS Workflow",
+		title: "E3OS WorkHub",
 		description: "Automate repetitive tasks and approvals across your entire business."
 	},
 	{
@@ -77,18 +70,25 @@ const SOLUTIONS = [
 		icon: CMVP,
 		title: "CMVP",
 		description: "Stay legally aligned and inspection ready"
+	},
+	{
+		icon: Workflow,
+		title: "PRO Learn",
+		description: "Train your team, track progress, and ensure compliance with our Learning Management System."
 	}
 ];
 
 const PARTNERS = [
-	Sobaz, 
-	Aradel, 
-	Seplat, 
-	CenGlobal, 
-	Asca, 
-	FlowGrid, 
-	Gmt,
-	Fn
+	Proliance,
+	E3OS,
+	// Sobaz, 
+	// Aradel, 
+	// Seplat, 
+	// CenGlobal, 
+	// Asca, 
+	// FlowGrid, 
+	// Gmt,
+	// Fn
 ];
 
 const TESTIMONIALS = [
@@ -143,6 +143,68 @@ const FAQS = [
 	}
 ];
 
+const E3OS_HIGHLIGHTS = [
+	{
+		title: "Simplified Processes",
+		description: "Streamline your workflows and keep everything running smoothly from start to finish",
+		tone: "dark",
+		icon: "cube"
+	},
+	{
+		title: "Work Smarter",
+		description: "Simplify daily tasks with smart automation and save time",
+		tone: "soft",
+		icon: "bulb"
+	},
+	{
+		title: "Built for Compliance",
+		description: "Stay accurate, organized, and in control at all times",
+		tone: "light",
+		icon: "thumb"
+	},
+	{
+		title: "Grows With You",
+		description: "Scale your business without the chaos",
+		tone: "accent",
+		icon: "chart"
+	}
+] as const;
+
+function HighlightIcon({ type }: { type: "cube" | "bulb" | "thumb" | "chart" }) {
+	if (type === "cube") {
+		return (
+			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path d="M12 3 4.5 7.2v9.6L12 21l7.5-4.2V7.2L12 3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+				<path d="M12 3v9m0 0 7.5-4.8M12 12 4.5 7.2" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+			</svg>
+		);
+	}
+
+	if (type === "bulb") {
+		return (
+			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path d="M8.5 14a5 5 0 1 1 7 0c-.7.6-1.2 1.4-1.3 2.2h-4.4c-.1-.8-.6-1.6-1.3-2.2Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+				<path d="M9.5 19h5m-4 2h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+			</svg>
+		);
+	}
+
+	if (type === "thumb") {
+		return (
+			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path d="M10 10.5 13.5 5a1.8 1.8 0 0 1 3.2 1.2l-.5 4.3h3a2 2 0 0 1 2 2.3l-1 5.5A2 2 0 0 1 18.2 20H10m0-9.5H6a1.5 1.5 0 0 0-1.5 1.5v6A1.5 1.5 0 0 0 6 19.5h4v-9Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+			</svg>
+		);
+	}
+
+	return (
+		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<path d="M5 19.5h14M7.5 16V9.5m4.5 6.5V6.5m4.5 9.5V11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+			<rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.6" />
+		</svg>
+	);
+}
+
 function HomePage() {
 	useScrollReveal();
 	return (
@@ -156,7 +218,7 @@ function HomePage() {
 						<img src={HERO_BG} alt="Connected technology graphic" className="site-hero-image" />
 					</div>
 					<div className="site-hero-copy" data-reveal="right" data-reveal-delay="400">
-						<h1>Your Business Technology Partners</h1>
+						<h1>Your Business Technology Partner</h1>
 						<div className="site-hero-actions">
 							<button type="button" className="site-primary-btn">
 								<Link to="#product">Explore Products</Link>
@@ -164,9 +226,9 @@ function HomePage() {
 							<button type="button" className="site-secondary-btn">
 								<Link to="/industries">Explore Industries</Link>
 							</button>
-							<button type="button" className="site-tertiary-btn" aria-label="Download brochure">
+							{/* <button type="button" className="site-tertiary-btn" aria-label="Download brochure">
 								<FolderDownloadIcon size={20} />
-							</button>
+							</button> */}
 						</div>
 					</div>
 				</div>
@@ -209,10 +271,52 @@ function HomePage() {
 								data-reveal="zoom"
 								data-reveal-delay={String(20 + (index % 6) * 60)}
 							>
-								<img src={partner} alt="Partner logo" className="partner-logo" />
+								<img src={partner} width={150} alt="Partner logo" className="partner-logo" />
 							</span>
 						))}
 					</div>
+				</div>
+			</section>
+
+			<section className="site-e3os-showcase" aria-label="E3OS value highlights" data-reveal>
+				<div className="container">
+					<div className="site-e3os-heading" data-reveal data-reveal-delay="40">
+						<h2>E3OS by PBTL</h2>
+						<p>
+							An all-in-one ERP platform designed for organisations that need smarter
+							control over their workforce and care management
+						</p>
+					</div>
+				</div>
+				<div className="site-e3os-grid" data-reveal="zoom" data-reveal-delay="70">
+					{E3OS_HIGHLIGHTS.map((item, index) => (
+						<article
+							key={item.title}
+							className={`site-e3os-card site-e3os-card-${item.tone}`}
+							data-reveal="zoom"
+							data-reveal-delay={String(40 + index * 60)}
+						>
+							<span className="site-e3os-icon">
+								<HighlightIcon type={item.icon} />
+							</span>
+							<h3>{item.title}</h3>
+							<p>{item.description}</p>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section className="site-e3os-cta" aria-label="Book an E3OS demo" data-reveal>
+				<div className="container site-e3os-cta-content" data-reveal="zoom" data-reveal-delay="40">
+					<h2>Experience Smarter Workforce &amp; Care Management</h2>
+					<p>
+						Book a personalized e3OS demo and see how one integrated platform can simplify
+						operations, empower your teams, and enhance care delivery across your
+						organization.
+					</p>
+					<Link to="/request-quote" className="site-e3os-cta-btn">
+						Request For Demo
+					</Link>
 				</div>
 			</section>
 

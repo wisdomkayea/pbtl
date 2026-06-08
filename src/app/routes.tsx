@@ -4,8 +4,9 @@ import AboutUsPage from "../pages/About/AboutUsPage";
 import ContactUsPage from "../pages/Contact/ContactUsPage";
 import HomePage from "../pages/Homepage/HomePage";
 import IndustriesPage from "../pages/Industries/IndustriesPage";
+import PrivacyPolicyPage from "../pages/PrivacyPolicy/PrivacyPolicy";
 import RequestQuotePage from "../pages/RequestQuote/RequestQuote";
-import ServicesPage from "../pages/Services/Services";
+import SolutionsPage from "../pages/Solutions/Solutions";
 
 export const router = createBrowserRouter([
 	{
@@ -21,8 +22,8 @@ export const router = createBrowserRouter([
 				element: <IndustriesPage />
 			},
 			{
-				path: "services",
-				element: <ServicesPage />
+				path: "solutions",
+				element: <SolutionsPage />
 			},
 			{
 				path: "about",
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
 			{
 				path: "request-quote",
 				element: <RequestQuotePage />
+			},
+			{
+				path: "privacy-policy",
+				element: <PrivacyPolicyPage />
 			}
 		]
 	}

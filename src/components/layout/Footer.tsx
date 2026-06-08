@@ -6,6 +6,7 @@ function Footer() {
 	const location = useLocation();
 	const isAboutPage = location.pathname === "/about";
 	const isContactPage = location.pathname === "/contact";
+	const isSolutionPage = location.pathname === "/solutions";
 
 	return (
 		<footer
@@ -35,6 +36,11 @@ function Footer() {
 						<li>
 							<NavLink to="/about" className="footer-nav-link">
 								About Us
+							</NavLink>
+						</li>
+						<li>
+							<NavLink to="/privacy-policy" className="footer-nav-link">
+								Privacy Policy
 							</NavLink>
 						</li>
 					</ul>

@@ -45,6 +45,65 @@
 	max-width: 415px;
 }
 
+.contact-site-details {
+	display: grid;
+	gap: 19px;
+	margin-top: 30.4px;
+	max-width: 520px;
+}
+
+.contact-site-detail-item {
+	align-items: center;
+	display: grid;
+	gap: 4px;
+	grid-template-columns: 36px 1fr;
+}
+
+.contact-site-detail-icon {
+	align-items: center;
+	color: #88d6a5;
+	display: inline-flex;
+	height: 20px;
+	justify-content: center;
+	width: 20px;
+}
+
+.contact-site-detail-icon svg {
+	height: 20px;
+	width: 20px;
+}
+
+.contact-site-detail-text {
+	color: #1d2939;
+	font-weight: 500;
+	line-height: 1.38;
+	margin: 0;
+	font-size: 14px !important;
+}
+
+.contact-site-detail-text p{
+	font-size: 14px;
+}
+
+.contact-site-detail-links {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.contact-site-detail-links a {
+	color: #1d2939;
+	font-size: 14px !important;
+	font-weight: 500;
+	line-height: 1.45;
+	text-underline-offset: 2px;
+}
+
+.contact-site-detail-links a:hover,
+.contact-site-detail-links a:focus-visible {
+	color: #9e371a;
+}
+
 .contact-site-form {
 	display: flex;
 	flex-direction: column;
@@ -111,6 +170,26 @@
 	width: fit-content;
 }
 
+.privacy-container {
+	margin: 0 auto;
+	max-width: var(--site-max-width);
+	padding: 0 clamp(1rem, 2.2vw, 1.5rem);
+	width: 100%;
+}
+.contact-site-privacy-note{
+	color: #101828;
+	font-size: 12px;
+	line-height: 1.82;
+	letter-spacing: 0.3px;
+	margin-top: 50px !important;
+	max-width: 415px;
+}
+
+.privacy-note a {
+	color: #9e371a;
+	text-decoration: underline;
+}
+
 .contact-site-submit:hover,
 .contact-site-submit:focus-visible {
 	background: #7d2c15;
@@ -124,6 +203,11 @@
 
 	.contact-site-intro p {
 		font-size: 16px;
+	}
+
+	.contact-site-detail-text,
+	.contact-site-detail-links a {
+		font-size: 14px;
 	}
 }
 
@@ -161,6 +245,26 @@
 	.contact-site-intro p {
 		font-size: 14px;
 		max-width: 680px;
+	}
+
+	.contact-site-detail-item {
+		gap: 12px;
+		grid-template-columns: 30px 1fr;
+	}
+
+	.contact-site-detail-icon {
+		height: 30px;
+		width: 30px;
+	}
+
+	.contact-site-detail-icon svg {
+		height: 19px;
+		width: 19px;
+	}
+
+	.contact-site-detail-text,
+	.contact-site-detail-links a {
+		font-size: 14px;
 	}
 
 	.contact-site-row-two {

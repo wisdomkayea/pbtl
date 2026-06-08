@@ -25,6 +25,13 @@ const INDUSTRIES_GRID_ITEMS = [
 		overlayOpacity: 0.7
 	},
 	{
+		title: "Healthcare",
+		description:
+			"Care coordination and rostering platforms, and compliance management tools. Workforce management, patient engagement solutions, and telehealth platforms.",
+		image: INDUSTRIES_GRID_INSURANCE_IMAGE,
+		overlayOpacity: 0.4
+	},
+	{
 		title: "Food and Agriculture",
 		description:
 			"Food safety compliance systems and traceability platforms, inventory management, and supply chain digitization.",
@@ -52,6 +59,7 @@ const INDUSTRIES_GRID_ITEMS = [
 		image: INDUSTRIES_GRID_INSURANCE_IMAGE,
 		overlayOpacity: 0.4
 	}
+	
 ];
 
 function IndustriesPage() {
@@ -71,14 +79,14 @@ function IndustriesPage() {
 					<h1 className="industries-figma-title" data-reveal data-reveal-delay="50">
 						<span>Powering Industries</span>
 						<span>
-							Through <span className="industries-figma-title-accent">Smart Business</span>
-						</span>
-						<span>Technology</span>
+							With <span className="industries-figma-title-accent">Smart Technology</span> </span>
+						<span>
+						Solutions</span>
 					</h1>
 
 					<p className="industries-figma-description" data-reveal data-reveal-delay="120">
-						PBTL builds innovative solutions across engineering, technology, consultancy, and
-						enterprise operations helping businesses streamline processes, improve
+						PBTL builds innovative solutions across engineering, healthcare, technology, consultancy, and
+						enterprise operations helping businesses meet compliance demands, streamline processes, improve
 						performance, and scale with confidence.
 					</p>
 

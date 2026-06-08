@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./RequestQuote.css";
 
 function RequestQuotePage() {
@@ -5,7 +6,7 @@ function RequestQuotePage() {
 		<section className="request-quote-page" aria-label="Request quote page">
 			<div className="container request-quote-container">
 				<header className="request-quote-header">
-					<h1>Request for Quote</h1>
+					<h1>Request for Demo</h1>
 					<p>
 						Share a few details about what you&apos;re looking for, and we&apos;ll help you find the
 						right service or custom solution.
@@ -43,13 +44,12 @@ function RequestQuotePage() {
 						<input id="requestEmail" name="email" type="email" />
 					</div>
 
-					<div className="request-quote-field request-quote-field-line">
+					<div className="request-quote-field-select">
 						<label htmlFor="requestProduct">
 							Products <span>*</span>
 						</label>
-						<textarea id="requestProduct" name="product" rows={1} />
-						 
-						{/* <select id="requestProduct" name="product" defaultValue="">
+						{/* <textarea id="requestProduct" name="product" rows={1} /> */}
+						<select id="requestProduct" name="product" defaultValue="">
 							<option value="" disabled hidden>
 								Select a product
 							</option>
@@ -58,7 +58,7 @@ function RequestQuotePage() {
 							<option value="finance">Finance Suite</option>
 							<option value="audit">Audit and Compliance</option>
 							<option value="procurement">Procurement</option>
-						</select> */}
+						</select>
 					</div>
 
 					<div className="request-quote-field request-quote-field-line">
@@ -69,9 +69,12 @@ function RequestQuotePage() {
 					</div>
 
 					<button type="submit" className="request-quote-submit">
-						Request Quote
+						Request For Demo
 					</button>
 				</form>
+				<div className="container contact-site-privacy-note">
+					All our services are carried out with the clear understanding that our customer data privacy is important, and we are committed to the protection of personal information in accordance with the General Data Protection Regulation (GDPR), the Nigeria Data Protection Act (NDPA), and other relevant global privacy regulations. For more information about our Data & Privacy Policy, please visit our <span className="privacy-note"><NavLink to="/privacy-policy">Privacy Policy</NavLink></span>.
+				</div>
 			</div>
 		</section>
 	);

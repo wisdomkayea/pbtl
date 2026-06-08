@@ -3,15 +3,19 @@ import { NavLink, useLocation } from "react-router-dom";
 import { COMPANY_NAME } from "../../lib/constants";
 import CompanyLogoBlack from "../../assets/images/logo_black.png";
 import CompanyLogoWhite from "../../assets/images/logo_white.png";
+import HeroSection from "../sections/HeroSection";
 
 
 function Header() {
 	const location = useLocation();
 	const isAboutPage = location.pathname === "/about";
+	const isCompanySection = location.pathname === "/about" || location.pathname === "/contact";
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 
 	useEffect(() => {
 		setIsMenuOpen(false);
+		setIsCompanyOpen(false);
 	}, [location.pathname]);
 
 	return (
@@ -50,6 +54,28 @@ function Header() {
 						<ul className="nav-list site-nav-list">
 							<li>
 								<NavLink
+									to="/solutions"
+									onClick={() => setIsMenuOpen(false)}
+									className={({ isActive }) =>
+										`nav-link site-nav-link ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
+									}
+								>
+									Solutions
+								</NavLink>
+							</li>
+								<li>
+								<NavLink
+									to="/#products"
+									onClick={() => setIsMenuOpen(false)}
+									className={({ isActive }) =>
+										`nav-link site-nav-link ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
+									}
+								>
+									Products
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
 									to="/industries"
 									onClick={() => setIsMenuOpen(false)}
 									className={({ isActive }) =>
@@ -59,38 +85,51 @@ function Header() {
 									Industries
 								</NavLink>
 							</li>
-							<li>
-								<NavLink
-									to="/services"
-									onClick={() => setIsMenuOpen(false)}
-									className={({ isActive }) =>
-										`nav-link site-nav-link ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
-									}
-								>
-									Services
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to="/contact"
-									onClick={() => setIsMenuOpen(false)}
-									className={({ isActive }) =>
-										`nav-link site-nav-link ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
-									}
-								>
-									Contact
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to="/about"
-									onClick={() => setIsMenuOpen(false)}
-									className={({ isActive }) =>
-										`nav-link site-nav-link ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
-									}
-								>
-									About Us
-								</NavLink>
+						
+							<li className={`site-nav-item-with-submenu ${isCompanyOpen ? "site-nav-item-open" : ""}`}>
+									<button
+										type="button"
+										className={`nav-link site-nav-link site-nav-submenu-trigger ${isAboutPage ? "about-bridge-nav-link" : ""} ${isCompanySection ? "site-nav-link-active" : ""}`}
+										onClick={() => setIsCompanyOpen((open) => !open)}
+										aria-expanded={isCompanyOpen}
+										aria-controls="company-submenu"
+									>
+										Company
+										
+									</button>
+									<ul
+										id="company-submenu"
+										className={`site-nav-submenu ${isCompanyOpen ? "site-nav-submenu-open" : ""}`}
+									>
+										<li>
+											<NavLink
+												to="/contact"
+												onClick={() => {
+													setIsMenuOpen(false);
+													setIsCompanyOpen(false);
+												}}
+												className={({ isActive }) =>
+													`nav-link site-nav-link site-nav-sublink ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
+												}
+											>
+												Contact
+											</NavLink>
+										</li>
+										<li>
+											<NavLink
+												to="/about"
+												onClick={() => {
+													setIsMenuOpen(false);
+													setIsCompanyOpen(false);
+												}}
+												className={({ isActive }) =>
+													`nav-link site-nav-link site-nav-sublink ${isAboutPage ? "about-bridge-nav-link" : ""} ${isActive ? "site-nav-link-active" : ""}`
+												}
+											>
+												About Us
+											</NavLink>
+										</li>
+									</ul>
 							</li>
 						</ul>
 					</nav>
@@ -101,7 +140,7 @@ function Header() {
 						className={`quote-button site-nav-quote ${isAboutPage ? "about-bridge-quote-button" : ""}`}
 						aria-label="Request a quote"
 					>
-						Request for Quote
+						Request for Demo
 					</NavLink>
 				</div>
 			</div>

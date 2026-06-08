@@ -7,7 +7,7 @@ import SERVICE_COMMISSIONING from "../../assets/images/services/service-commissi
 import SERVICE_INTEGRITY from "../../assets/images/services/service-integrity.png";
 import SERVICE_VERIFICATION from "../../assets/images/services/service-verification.png";
 import SERVICE_BRAND from "../../assets/images/services/service-brand.png";
-import "./Services.css";
+import "./Solutions.css";
 
 type ServiceItem = {
 	title: string;
@@ -61,11 +61,11 @@ const SERVICE_ITEMS: ServiceItem[] = [
 	}
 ];
 
-function ServicesPage() {
+function SolutionsPage() {
 	useScrollReveal();
 
 	return (
-		<div className="services-page" aria-label="Services offered by PBTL">
+		<div className="services-page" aria-label="Solutions offered by PBTL">
 			<section className="services-hero" data-reveal="zoom">
 				<div
 					className="services-hero-pattern"
@@ -86,7 +86,7 @@ function ServicesPage() {
 
 			<section className="services-intro" data-reveal>
 				<div className="container">
-					<h2 data-reveal data-reveal-delay="30">Services We Offer</h2>
+					<h2 data-reveal data-reveal-delay="30">Solutions We Offer</h2>
 					<p data-reveal data-reveal-delay="70">
 						Browse our full range of technology services below. Each one is delivered
 						by a team of experts who understand your industry and are committed to
@@ -139,4 +139,4 @@ function ServicesPage() {
 	);
 }
 
-export default ServicesPage;
+export default SolutionsPage;

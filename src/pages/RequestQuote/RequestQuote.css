@@ -93,21 +93,23 @@
 	border-bottom-color: #9e371a;
 }
 
+.request-quote-field-select {
+	font-size: 14px;
+}
+
 .request-quote-field-select select {
 	appearance: none;
-	background: #ffffff
-		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%2398A2B3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
-		no-repeat right 0.9rem center;
 	border: 1px solid #e5e7eb;
 	border-radius: 12px;
 	box-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
 	color: #6a7282;
 	font-family: inherit;
-	font-size: 1rem;
+	font-size: 14px;
 	line-height: 1.5;
 	outline: none;
 	padding: 0.72rem 2.2rem 0.72rem 0.85rem;
 	width: 100%;
+	margin-top: 20px
 }
 
 .request-quote-field-select select:focus {
