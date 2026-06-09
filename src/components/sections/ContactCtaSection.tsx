@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Section from "../common/Section";
 
 function ContactCtaSection() {
@@ -7,7 +7,7 @@ function ContactCtaSection() {
 			<div className="container">
 				<h2>Need to reach us?</h2>
 				<p>Use the contact page boilerplate and plug in your company channels when ready.</p>
-				<Link to="/contact" className="btn btn-link">
+				<Link href="/contact" className="btn btn-link">
 					Go to Contact Us
 				</Link>
 			</div>

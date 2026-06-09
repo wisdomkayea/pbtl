@@ -1,47 +1,54 @@
-import { NavLink, useLocation } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { COMPANY_NAME } from "../../lib/constants";
 import CompanyLogoBlack from "../../assets/images/logo_black.png";
 
 function Footer() {
-	const location = useLocation();
-	const isAboutPage = location.pathname === "/about";
-	const isContactPage = location.pathname === "/contact";
-	const isSolutionPage = location.pathname === "/solutions";
+	const pathname = usePathname();
+	const isAboutPage = pathname === "/about";
+	const isContactPage = pathname === "/contact";
 
 	return (
 		<footer
 			className={`site-footer ${isAboutPage || isContactPage ? "about-bridge-footer" : ""}`}
 		>
 			<div className="container footer-content footer-content-extended">
-				<NavLink
-					to="/"
+				<Link
+					href="/"
 					className={`brand-mark site-brand footer-brand ${isAboutPage ? "about-bridge-brand" : ""}`}
 					aria-label={`${COMPANY_NAME} home`}
 				>
-					<img src={CompanyLogoBlack} alt={`${COMPANY_NAME} logo`} className="footer-logo" />
-				</NavLink>
+					<img src={CompanyLogoBlack.src} alt={`${COMPANY_NAME} logo`} className="footer-logo" />
+				</Link>
 
 				<nav aria-label="Footer navigation" className="footer-nav">
 					<ul className="nav-list footer-nav-list">
 						<li>
-							<NavLink to="/industries" className="footer-nav-link">
+							<Link href="/solutions" className="footer-nav-link">
+								Solutions
+							</Link>
+						</li>
+						<li>
+							<Link href="/industries" className="footer-nav-link">
 								Industries
-							</NavLink>
+							</Link>
 						</li>
 						<li>
-							<NavLink to="/contact" className="footer-nav-link">
+							<Link href="/contact" className="footer-nav-link">
 								Contact
-							</NavLink>
+							</Link>
 						</li>
 						<li>
-							<NavLink to="/about" className="footer-nav-link">
+							<Link href="/about" className="footer-nav-link">
 								About Us
-							</NavLink>
+							</Link>
 						</li>
 						<li>
-							<NavLink to="/privacy-policy" className="footer-nav-link">
+							<Link href="/privacy-policy" className="footer-nav-link">
 								Privacy Policy
-							</NavLink>
+							</Link>
 						</li>
 					</ul>
 				</nav>

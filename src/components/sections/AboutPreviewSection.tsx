@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Section from "../common/Section";
 
 function AboutPreviewSection() {
@@ -10,7 +10,7 @@ function AboutPreviewSection() {
 					This starter includes a dedicated About page so your company story, mission, and values
 					can scale as content grows.
 				</p>
-				<Link to="/about" className="text-link">
+				<Link href="/about" className="text-link">
 					Learn more
 				</Link>
 			</div>

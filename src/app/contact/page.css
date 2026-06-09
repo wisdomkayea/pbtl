@@ -55,7 +55,7 @@
 .contact-site-detail-item {
 	align-items: center;
 	display: grid;
-	gap: 4px;
+	gap: 20px;
 	grid-template-columns: 36px 1fr;
 }
 
@@ -63,9 +63,11 @@
 	align-items: center;
 	color: #88d6a5;
 	display: inline-flex;
-	height: 20px;
+	height: 40px;
+	width: 40px;
 	justify-content: center;
-	width: 20px;
+	background-color: #FFDED466;
+	border-radius: var(--border-border-radius-rounded-full, 9999px);
 }
 
 .contact-site-detail-icon svg {
@@ -193,6 +195,11 @@
 .contact-site-submit:hover,
 .contact-site-submit:focus-visible {
 	background: #7d2c15;
+}
+
+.contact-site-submit:disabled {
+	background: #b58a7f;
+	cursor: not-allowed;
 }
 
 @media (max-width: 1200px) {

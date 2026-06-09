@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { COMPANY_NAME } from "../../lib/constants";
 import Section from "../common/Section";
 
@@ -12,7 +12,7 @@ function HeroSection() {
 					sections.
 				</p>
 				<div className="hero-actions">
-					<Link to="/contact" className="btn btn-link">
+					<Link href="/contact" className="btn btn-link">
 						Contact Us
 					</Link>
 				</div>

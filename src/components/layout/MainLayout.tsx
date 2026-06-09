@@ -1,13 +1,19 @@
-import { Outlet } from "react-router-dom";
+import type { ReactNode } from "react";
+import ScrollRevealManager from "../common/ScrollRevealManager";
 import Footer from "./Footer";
 import Header from "./Header";
 
-function MainLayout() {
+type MainLayoutProps = {
+	children: ReactNode;
+};
+
+function MainLayout({ children }: MainLayoutProps) {
 	return (
 		<div className="site-shell">
+			<ScrollRevealManager />
 			<Header />
 			<main className="site-main">
-				<Outlet />
+				{children}
 			</main>
 			<Footer />
 		</div>

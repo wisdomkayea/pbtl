@@ -8,14 +8,15 @@ This workspace is scaffolded for a multi-page company landing website for **PBTL
 - Contact Us page
 
 ## Notes
-- The project now includes a working React + TypeScript + Vite boilerplate.
-- Routing is configured for Home, About Us, and Contact Us.
+- The project now includes a working Next.js App Router setup with React + TypeScript.
+- Routing is configured using the `src/app` directory.
 - The structure is ready for future growth (additional pages, sections, shared components, services, and tests).
 
 ## Run Locally
 - Install dependencies: `npm install`
 - Start development server: `npm run dev`
 - Build production bundle: `npm run build`
+- Start production server: `npm run start`
 
 ## Folder Structure
 
@@ -26,8 +27,20 @@ pbtl-website/
       .gitkeep
   src/
     app/
-      App.tsx
-      routes.tsx
+      layout.tsx
+      page.tsx
+      about/
+        page.tsx
+      contact/
+        page.tsx
+      industries/
+        page.tsx
+      privacy-policy/
+        page.tsx
+      request-quote/
+        page.tsx
+      solutions/
+        page.tsx
     pages/
       HomePage.tsx
       AboutUsPage.tsx
@@ -59,14 +72,12 @@ pbtl-website/
     utils/
       .gitkeep
     index.css
-    main.tsx
   tests/
     pages/
       .gitkeep
+  next-env.d.ts
+  next.config.ts
   .gitignore
-  index.html
   package.json
   tsconfig.json
-  tsconfig.node.json
-  vite.config.ts
 ```
