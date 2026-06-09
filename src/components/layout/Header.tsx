@@ -125,7 +125,6 @@ function Header() {
 										aria-controls="company-submenu"
 									>
 										Company
-										
 									</button>
 									<ul
 										id="company-submenu"

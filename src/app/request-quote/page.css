@@ -200,6 +200,26 @@
 	outline: none;
 }
 
+.privacy-container {
+	margin: 0 auto;
+	max-width: var(--site-max-width);
+	padding: 0 clamp(1rem, 2.2vw, 1.5rem);
+	width: 100%;
+}
+.privacy-site-privacy-note{
+	color: #101828;
+	font-size: 12px;
+	line-height: 1.82;
+	letter-spacing: 0.3px;
+	margin-top: 50px !important;
+	width: 100%;
+}
+
+.privacy-note a {
+	color: #9e371a;
+	text-decoration: underline;
+}
+
 .request-quote-select-option.active {
 	background: rgba(158, 26, 26, 0.12);
 	color: #8c3118;

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./page.css";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { sendQuoteRequest } from "../../lib/contactApi";
 import { resolveUserLocation } from "../../lib/location";
 
@@ -21,7 +22,10 @@ const PRODUCT_OPTIONS = [
 	{ value: "custom", label: "Custom Solution" }
 ];
 
+const PRODUCT_OPTION_VALUES = new Set(PRODUCT_OPTIONS.map((option) => option.value));
+
 function RequestQuotePage() {
+	const searchParams = useSearchParams();
 	const [selectedProduct, setSelectedProduct] = useState("");
 	const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,6 +60,19 @@ function RequestQuotePage() {
 
 	const selectedProductLabel =
 		PRODUCT_OPTIONS.find((option) => option.value === selectedProduct)?.label ?? "Select a product";
+
+	useEffect(() => {
+		const productParam = (searchParams?.get("product") ?? "").trim().toLowerCase();
+
+		if (!productParam) {
+			setSelectedProduct("");
+			return;
+		}
+
+		if (PRODUCT_OPTION_VALUES.has(productParam)) {
+			setSelectedProduct(productParam);
+		}
+	}, [searchParams]);
 
 	useEffect(() => {
 		if (!toast) {
@@ -224,7 +241,7 @@ function RequestQuotePage() {
 						{toast.message}
 					</div>
 				)}
-				<div className="container contact-site-privacy-note">
+				<div className="container privacy-site-privacy-note">
 					All our services are carried out with the clear understanding that our customer data privacy is important, and we are committed to the protection of personal information in accordance with the General Data Protection Regulation (GDPR), the Nigeria Data Protection Act (NDPA), and other relevant global privacy regulations. For more information about our Data & Privacy Policy, please visit our <span className="privacy-note"><Link href="/privacy-policy">Privacy Policy</Link></span>.
 				</div>
 			</div>
