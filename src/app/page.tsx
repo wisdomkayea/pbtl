@@ -259,7 +259,7 @@ const E3OS_HIGHLIGHTS = [
 		icon: "thumb"
 	},
 	{
-		title: "Grows With You",
+		title: "Scale With You",
 		description: "Scale your business without the chaos",
 		tone: "accent",
 		icon: "chart"
@@ -269,34 +269,41 @@ const E3OS_HIGHLIGHTS = [
 function HighlightIcon({ type }: { type: "cube" | "bulb" | "thumb" | "chart" }) {
 	if (type === "cube") {
 		return (
-			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-				<path d="M12 3 4.5 7.2v9.6L12 21l7.5-4.2V7.2L12 3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-				<path d="M12 3v9m0 0 7.5-4.8M12 12 4.5 7.2" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+				<path d="M19.9999 36.6667C20.4071 36.6667 20.7856 36.4782 21.5427 36.1014L27.6276 33.0721C30.3203 31.7316 31.6666 31.0614 31.6666 30V16.6667M19.9999 36.6667C19.5927 36.6667 19.2142 36.4782 18.4572 36.1014L12.3722 33.0721C9.67957 31.7316 8.33325 31.0614 8.33325 30V16.6667M19.9999 36.6667V23.3333M8.33325 16.6667C8.33325 17.728 9.67957 18.3983 12.3722 19.7387L18.4572 22.768C19.2142 23.1449 19.5927 23.3333 19.9999 23.3333C20.4071 23.3333 20.7856 23.1449 21.5427 22.768L27.6276 19.7387C30.3203 18.3983 31.6666 17.728 31.6666 16.6667C31.6666 15.6053 30.3203 14.9351 27.6276 13.5946L21.5427 10.5653C20.7856 10.1884 20.4071 10 19.9999 10C19.5927 10 19.2142 10.1884 18.4572 10.5653L12.3722 13.5946C9.67957 14.9351 8.33325 15.6053 8.33325 16.6667Z" stroke="#FCD9BD" strokeWidth="1.5" strokeLinejoin="round"/>
+				<path opacity="0.4" d="M36.6667 35.0002L31.6667 30.8335" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+				<path opacity="0.4" d="M20 3.3335V10.0002" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+				<path opacity="0.4" d="M3.33325 35.0002L8.33325 30.8335" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 			</svg>
 		);
 	}
 
 	if (type === "bulb") {
 		return (
-			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-				<path d="M8.5 14a5 5 0 1 1 7 0c-.7.6-1.2 1.4-1.3 2.2h-4.4c-.1-.8-.6-1.6-1.3-2.2Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-				<path d="M9.5 19h5m-4 2h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+				<path d="M8.57151 23.3335C7.36233 21.3471 6.66675 19.0198 6.66675 16.5316C6.66675 9.24249 12.6363 3.3335 20.0001 3.3335C27.3639 3.3335 33.3334 9.24249 33.3334 16.5316C33.3334 19.0198 32.6378 21.3471 31.4287 23.3335" stroke="#9E371A" strokeWidth="1.5" strokeLinecap="round"/>
+				<path opacity="0.4" d="M16.6666 16.6665C17.6874 17.7385 18.8147 18.3332 19.9999 18.3332C21.1851 18.3332 22.3125 17.7385 23.3333 16.6665M19.9999 18.3332L19.9999 25.8332M24.9999 31.6665L24.7844 32.7442C24.5487 33.9226 24.4309 34.5118 24.1668 34.9775C23.7585 35.6974 23.097 36.2397 22.3109 36.4989C21.8026 36.6665 21.2017 36.6665 19.9999 36.6665C18.7982 36.6665 18.1973 36.6665 17.6889 36.4989C16.9028 36.2397 16.2413 35.6974 15.833 34.9775C15.569 34.5118 15.4511 33.9226 15.2155 32.7442L14.9999 31.6665M16.6864 31.6665H23.3135C24.2083 31.6665 24.6558 31.6665 25.0509 31.5678C25.8785 31.361 26.5952 30.8426 27.0524 30.1199C27.2707 29.7749 27.4122 29.3489 27.6951 28.4969C27.8482 28.0359 27.9248 27.8054 27.9159 27.6186C27.897 27.2236 27.648 26.8769 27.2806 26.7341C27.1069 26.6665 26.8648 26.6665 26.3806 26.6665H13.6192C13.135 26.6665 12.8929 26.6665 12.7192 26.7341C12.3518 26.8769 12.1028 27.2236 12.084 27.6186C12.075 27.8054 12.1516 28.0359 12.3047 28.4969C12.5877 29.3489 12.7292 29.7749 12.9474 30.1199C13.4046 30.8426 14.1213 31.361 14.949 31.5678C15.3441 31.6665 15.7915 31.6665 16.6864 31.6665Z" stroke="#9E371A" strokeWidth="1.5" strokeLinecap="round"/>
 			</svg>
 		);
 	}
 
 	if (type === "thumb") {
 		return (
-			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-				<path d="M10 10.5 13.5 5a1.8 1.8 0 0 1 3.2 1.2l-.5 4.3h3a2 2 0 0 1 2 2.3l-1 5.5A2 2 0 0 1 18.2 20H10m0-9.5H6a1.5 1.5 0 0 0-1.5 1.5v6A1.5 1.5 0 0 0 6 19.5h4v-9Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+				<path opacity="0.4" d="M3.33325 20.8333C3.33325 18.9924 4.82564 17.5 6.66659 17.5C9.42801 17.5 11.6666 19.7386 11.6666 22.5V29.1667C11.6666 31.9281 9.42801 34.1667 6.66659 34.1667C4.82564 34.1667 3.33325 32.6743 3.33325 30.8333V20.8333Z" stroke="#BD4624" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+				<path d="M25.798 13.0106L25.3542 14.4441C24.9905 15.6187 24.8086 16.206 24.9485 16.6698C25.0616 17.0451 25.31 17.3685 25.6484 17.5813C26.0668 17.8444 26.6996 17.8444 27.9653 17.8444H28.6386C32.922 17.8444 35.0637 17.8444 36.0753 19.1123C36.191 19.2572 36.2938 19.4113 36.3827 19.5729C37.1609 20.9871 36.2762 22.892 34.5067 26.702C32.8829 30.1983 32.071 31.9465 30.5635 32.9754C30.4175 33.075 30.2675 33.169 30.1139 33.2571C28.5268 34.1668 26.5604 34.1668 22.6274 34.1668H21.7744C17.0096 34.1668 14.6272 34.1668 13.147 32.7326C11.6667 31.2984 11.6667 28.9901 11.6667 24.3734V22.7507C11.6667 20.3246 11.6667 19.1115 12.0973 18.0012C12.5279 16.8908 13.3523 15.9779 15.0012 14.152L21.8203 6.6011C21.9913 6.41173 22.0768 6.31702 22.1522 6.25141C22.856 5.63896 23.9421 5.7079 24.5574 6.40407C24.6233 6.47865 24.6954 6.58335 24.8394 6.79272C25.0648 7.12024 25.1775 7.284 25.2757 7.44625C26.1548 8.89871 26.4208 10.6241 26.0181 12.2621C25.9731 12.445 25.9147 12.6337 25.798 13.0106Z" fill="#FFCEC0" stroke="#BD4624" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 			</svg>
 		);
 	}
 
 	return (
-		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-			<path d="M5 19.5h14M7.5 16V9.5m4.5 6.5V6.5m4.5 9.5V11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-			<rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.6" />
+		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+			<path d="M11.4111 29.1668V25.8335V29.1668Z" fill="white"/>
+			<path d="M11.4111 29.1668V25.8335" stroke="#FFCEC0" strokeWidth="1.5" strokeLinecap="round"/>
+			<path d="M20 30V25" stroke="#FFCEC0" strokeWidth="1.5" strokeLinecap="round"/>
+			<path d="M28.3333 29.9998V21.6665" stroke="#FFCEC0" strokeWidth="1.5" strokeLinecap="round"/>
+			<path d="M4.16675 19.9998C4.16675 12.5359 4.16675 8.80399 6.48548 6.48524C8.80423 4.1665 12.5362 4.1665 20.0001 4.1665C27.4639 4.1665 31.1959 4.1665 33.5147 6.48524C35.8334 8.80399 35.8334 12.5359 35.8334 19.9998C35.8334 27.4637 35.8334 31.1957 33.5147 33.5145C31.1959 35.8332 27.4639 35.8332 20.0001 35.8332C12.5362 35.8332 8.80423 35.8332 6.48548 33.5145C4.16675 31.1957 4.16675 27.4637 4.16675 19.9998Z" stroke="#FFCEC0" strokeWidth="1.5"/>
+			<path opacity="0.4" d="M9.96899 19.1626C13.5608 19.2823 21.7055 18.7403 26.3382 11.3877M23.3024 10.4995L26.4283 9.99637C26.8093 9.94785 27.3687 10.2486 27.5062 10.6072L28.3326 13.3379" stroke="#FFCEC0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 		</svg>
 	);
 }
@@ -489,7 +496,7 @@ function HomePage() {
 				<div className="container site-e3os-cta-content" data-reveal="zoom" data-reveal-delay="620">
 					<h2>Experience Smarter Workforce &amp; Care Management</h2>
 					<p>
-						Book a personalized e3OS demo and see how one integrated platform can simplify
+						Book a personalized E3OS demo and see how one integrated platform can simplify
 						operations, empower your teams, and enhance care delivery across your
 						organization.
 					</p>

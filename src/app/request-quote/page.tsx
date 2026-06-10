@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import "./page.css";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -24,7 +24,7 @@ const PRODUCT_OPTIONS = [
 
 const PRODUCT_OPTION_VALUES = new Set(PRODUCT_OPTIONS.map((option) => option.value));
 
-function RequestQuotePage() {
+function RequestQuotePageContent() {
 	const searchParams = useSearchParams();
 	const [selectedProduct, setSelectedProduct] = useState("");
 	const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
@@ -249,4 +249,10 @@ function RequestQuotePage() {
 	);
 }
 
-export default RequestQuotePage;
+export default function RequestQuotePage() {
+	return (
+		<Suspense fallback={null}>
+			<RequestQuotePageContent />
+		</Suspense>
+	);
+}
