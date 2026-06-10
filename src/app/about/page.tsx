@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import "./page.css";
 import ABOUT_PATTERN from "../../assets/images/about-pattern.png";
-import VISION_IMAGE from "../../assets/images/pbtl-vision.png";
-import MISSION_IMAGE from "../../assets/images/pbtl-mission.png";
+import VISION_IMAGE from "../../assets/images/pbtl-vision.webp";
+import MISSION_IMAGE from "../../assets/images/pbtl-mission.webp";
 import RING_LEFT from "../../assets/images/ring_left.png";
 import RING_RIGHT from "../../assets/images/ring_right.png";
 import { JusticeScale01Icon, ZapIcon, BulbIcon, TradeUpIcon } from "hugeicons-react";
@@ -99,8 +99,6 @@ function AboutUsPage() {
 
 			<section className="about-bridge-mission-vision" data-reveal>
 				<div className="container about-bridge-mv-wrap">
-					{/* <img src={RING_LEFT.src} className="about-ring-left" alt="" aria-hidden="true" />
-					<img src={RING_RIGHT.src} className="about-ring-right" alt="" aria-hidden="true" /> */}
 					<img src={RING_LEFT.src} className="about-bridge-ring about-bridge-ring-left" alt="" aria-hidden="true" />
 					<img src={RING_RIGHT.src} className="about-bridge-ring about-bridge-ring-right" alt="" aria-hidden="true" />
 

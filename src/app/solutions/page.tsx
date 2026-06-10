@@ -1,14 +1,14 @@
 import "./page.css";
 import Link from "next/link";
 import ABOUT_PATTERN from "../../assets/images/about-pattern.png";
-import SERVICE_SOFTWARE from "../../assets/images/services/service-software.png";
-import SERVICE_AUDIT from "../../assets/images/services/service-audit.png";
-import SERVICE_CARE from "../../assets/images/services/care-rostering.png";
-import SERVICE_INTEGRITY from "../../assets/images/services/service-integrity.png";
-import SERVICE_LIMS from "../../assets/images/services/service-verification.png";
-import SERVICE_MEDICAL from "../../assets/images/services/medical-administrative.png";
-import SERVICE_CERTIFICATE from "../../assets/images/services/certificate-management.png";
-import SERVICE_BRAND from "../../assets/images/services/service-brand.png";
+import SERVICE_SOFTWARE from "../../assets/images/services/service-software.webp";
+import SERVICE_AUDIT from "../../assets/images/services/service-audit.webp";
+import SERVICE_CARE from "../../assets/images/services/care-rostering.webp";
+import SERVICE_INTEGRITY from "../../assets/images/services/service-integrity.webp";
+import SERVICE_LIMS from "../../assets/images/services/service-verification.webp";
+import SERVICE_MEDICAL from "../../assets/images/services/medical-administrative.webp";
+import SERVICE_CERTIFICATE from "../../assets/images/services/certificate-management.webp";
+import SERVICE_BRAND from "../../assets/images/services/service-brand.webp";
 
 type ServiceItem = {
 	title: string;

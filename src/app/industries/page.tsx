@@ -1,13 +1,13 @@
 import "./page.css";
 import INDUSTRIES_HERO_NETWORK_IMAGE from "../../assets/images/industries-hero-network.png";
 import INDUSTRIES_HERO_SHAPE from "../../assets/images/industries-hero-shape.svg";
-import INDUSTRIES_GRID_ENERGY_IMAGE from "../../assets/images/industries-grid-energy.png";
-import INDUSTRIES_GRID_MANUFACTURING_IMAGE from "../../assets/images/industries-grid-manufacturing.jpg";
-import INDUSTRIES_GRID_HEALTH_IMAGE from "../../assets/images/health.jpeg";
-import INDUSTRIES_GRID_FOOD_IMAGE from "../../assets/images/industries-grid-food.png";
-import INDUSTRIES_GRID_MARITIME_IMAGE from "../../assets/images/industries-grid-maritime.png";
-import INDUSTRIES_GRID_TECH_IMAGE from "../../assets/images/industries-grid-tech.png";
-import INDUSTRIES_GRID_INSURANCE_IMAGE from "../../assets/images/industries-grid-insurance.png";
+import INDUSTRIES_GRID_ENERGY_IMAGE from "../../assets/images/industries-grid-energy.webp";
+import INDUSTRIES_GRID_MANUFACTURING_IMAGE from "../../assets/images/industries-grid-manufacturing.webp";
+import INDUSTRIES_GRID_HEALTH_IMAGE from "../../assets/images/health.webp";
+import INDUSTRIES_GRID_FOOD_IMAGE from "../../assets/images/industries-grid-food.webp";
+import INDUSTRIES_GRID_MARITIME_IMAGE from "../../assets/images/industries-grid-maritime.webp";
+import INDUSTRIES_GRID_TECH_IMAGE from "../../assets/images/industries-grid-tech.webp";
+import INDUSTRIES_GRID_INSURANCE_IMAGE from "../../assets/images/industries-grid-insurance.webp";
 
 const INDUSTRIES_GRID_ITEMS = [
 	{
