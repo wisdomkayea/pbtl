@@ -386,15 +386,23 @@
 }
 
 .site-solution-modal-close {
-	background: transparent;
+	align-items: center;
+	background: #ffffff;
+	border-radius: 999px;
 	border: none;
 	color: #141b34;
+	display: inline-flex;
 	cursor: pointer;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	height: 32px;
+	justify-content: center;
 	line-height: 1;
 	position: absolute;
 	right: 20px;
 	top: 20px;
+	width: 32px;
+	z-index: 2;
 }
 
 .site-solution-modal-art {
@@ -572,30 +580,35 @@
 
 .testimonial-track {
 	animation: siteTestimonialsMarquee 42s linear infinite;
+	align-items: stretch;
 	display: flex;
+	min-width: max-content;
 	width: max-content;
 	will-change: transform;
 }
 
 .testimonial-group {
 	display: flex;
+	flex: 0 0 auto;
 	gap: 1rem;
+	min-width: max-content;
 	padding-right: 1rem;
 }
 
 @keyframes siteTestimonialsMarquee {
 	0% {
-		transform: translateX(0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	100% {
-		transform: translateX(-50%);
+		transform: translate3d(-50%, 0, 0);
 	}
 }
 
 .testimonial-card {
 	background: #fff;
-	flex: 0 0 clamp(220px, 28vw, 280px);
+	flex: 0 0 auto;
+	width: clamp(220px, 28vw, 280px);
 	padding: 1rem;
 	scroll-snap-align: start;
 	text-align: left;
@@ -610,7 +623,7 @@
 
 .testimonial-card p {
 	color: #4b5563;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1.45;
 	margin: 10px 0 1rem;
 }
@@ -808,7 +821,8 @@
 }
 
 	.testimonial-card {
-		flex: 0 0 clamp(220px, 18vw, 200px);
+		flex: 0 0 auto;
+		width: 220px;
 	}
 
 	.site-testimonials {
@@ -823,27 +837,34 @@
 @media (max-width: 540px) {
 	.site-solution-modal-backdrop {
 		background: rgba(16, 24, 40, 0.24);
-		padding: 0;
+		padding: 16px;
 	}
 
 	.site-solution-modal {
+		background: #ffffff;
 		box-shadow: none;
 		gap: 14px;
-		inset: 0;
-		left: 0;
-		max-height: 100vh;
-		max-width: none;
+		left: 50%;
+		max-height: calc(100vh - 32px);
+		max-width: calc(100vw - 32px);
 		overflow-y: auto;
 		padding: 8px 24px 36px;
-		top: 0;
-		transform: none;
-		width: 100%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100vw - 32px);
 	}
 
 	.site-solution-modal-close {
-		font-size: 1.9rem;
-		right: 24px;
-		top: 8px;
+		background: rgba(255, 255, 255, 0.95);
+		display: inline-flex;
+		font-size: 1.2rem;
+		height: 32px;
+		justify-self: end;
+		margin: 0;
+		position: relative;
+		right: auto;
+		top: auto;
+		width: 32px;
 	}
 
 	.site-solution-modal-art {
