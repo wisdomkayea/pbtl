@@ -193,25 +193,25 @@ const TESTIMONIALS = [
 		avatar: Patience.src,
 		name: "Patience",
 		role: "Finance",
-		quote: "A reliable solution that has improved efficiency and reporting across our finance operations."
+		quote: "A reliable solution that has improved efficiency and reporting across our finance operations through E3OS Finance."
 	},
 	{
 		avatar: Daniel.src,
 		name: "Daniel",
 		role: "Training",
-		quote: "Simple, effective, and exactly what we needed to manage our training activities."
+		quote: "Training administration has become simpler and more effective with PRO Learn, making it easier to deliver quality learning experiences."
 	},
 	{
 		avatar: Tonna.src,
 		name: "Tonna",
 		role: "Project Manager",
-		quote: "An excellent platform for tracking progress and keeping teams aligned."
+		quote: "Tracking progress and keeping teams aligned has never been easier thanks to E3OS WorkHub."
 	},
 	{
 		avatar: Victory.src,
 		name: "Victory",
 		role: "HR Manager",
-		quote: "It has made workforce management more organized and significantly easier."
+		quote: "Workforce management is now more organized and efficient with E3OS Human Resources, saving valuable time every day."
 	}
 ];
 
