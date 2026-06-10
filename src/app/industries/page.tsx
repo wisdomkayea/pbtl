@@ -1,5 +1,5 @@
 import "./page.css";
-import INDUSTRIES_HERO_NETWORK_IMAGE from "../../assets/images/industries-hero-network.png";
+// import INDUSTRIES_HERO_NETWORK_IMAGE from "../../assets/images/industries-hero-network.png";
 import INDUSTRIES_HERO_SHAPE from "../../assets/images/industries-hero-shape.svg";
 import INDUSTRIES_GRID_ENERGY_IMAGE from "../../assets/images/industries-grid-energy.webp";
 import INDUSTRIES_GRID_MANUFACTURING_IMAGE from "../../assets/images/industries-grid-manufacturing.webp";
@@ -15,7 +15,7 @@ const INDUSTRIES_GRID_ITEMS = [
 		description:
 			"Compliance management, ERP integration, asset lifecycle management, and data-driven decision platforms, operational optimization and I.T systems/infrastructure auditing.",
 		image: INDUSTRIES_GRID_ENERGY_IMAGE.src,
-		overlayOpacity: 0.5 
+		overlayOpacity: 0.4 
 	},
 	{
 		title: "Manufacturing",
@@ -29,7 +29,7 @@ const INDUSTRIES_GRID_ITEMS = [
 		description:
 			"Care coordination and rostering platforms, and compliance management tools. Workforce management, patient engagement solutions, and telehealth platforms.",
 		image: INDUSTRIES_GRID_HEALTH_IMAGE.src,
-		overlayOpacity: 0.7
+		overlayOpacity: 0.8
 	},
 	{
 		title: "Food and Agriculture",
@@ -57,7 +57,7 @@ const INDUSTRIES_GRID_ITEMS = [
 		description:
 			"Governance, risk, and compliance (GRC) platforms, fraud detection, and audit systems, enterprise data management, BI dashboards, and performance management systems.",
 		image: INDUSTRIES_GRID_INSURANCE_IMAGE.src,
-		overlayOpacity: 0.4
+		overlayOpacity: 0.5
 	}
 	
 ];
@@ -88,7 +88,7 @@ function IndustriesPage() {
 						performance, and scale with confidence.
 					</p>
 
-					<div>
+					{/* <div>
 						<img
 						src={INDUSTRIES_HERO_NETWORK_IMAGE.src}
 						alt="Abstract digital network visualization"
@@ -96,7 +96,7 @@ function IndustriesPage() {
 						data-reveal="zoom"
 						data-reveal-delay="160"
 					/>
-					</div>
+					</div> */}
 				</div>
 			</section>
 

@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 		"Cloud",
 		"ERP",
 		"Compliance",
+		"Care Rostering",
 		"Workforce Management",
 		"Digital Transformation"
 	],

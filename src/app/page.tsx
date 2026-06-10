@@ -513,19 +513,31 @@ function HomePage() {
 						Hear what people are saying about PBTL and our products.
 					</p>
 					<div className="testimonial-sec">
-						{TESTIMONIALS.map((item, index) => (
-							<article
-								key={item.name}
-								className="testimonial-card"
-								data-reveal="zoom"
-								data-reveal-delay={String(500 + index * 85)}
-							>
-								<img src={item.avatar} alt={`${item.name} profile picture`} className="testimonial-image" />
-								<p>{item.quote}</p>
-								<strong>{item.name}</strong>
-								<span>{item.role}</span>
-							</article>
-						))}
+						<div className="testimonial-track">
+							<div className="testimonial-group">
+								{TESTIMONIALS.map((item, index) => (
+									<article
+										key={`${item.name}-primary`}
+										className="testimonial-card"
+									>
+										<img src={item.avatar} alt={`${item.name} profile picture`} className="testimonial-image" />
+										<p>{item.quote}</p>
+										<strong>{item.name}</strong>
+										<span>{item.role}</span>
+									</article>
+								))}
+							</div>
+							<div className="testimonial-group" aria-hidden="true">
+								{TESTIMONIALS.map((item) => (
+									<article key={`${item.name}-clone`} className="testimonial-card">
+										<img src={item.avatar} alt="" aria-hidden="true" className="testimonial-image" />
+										<p>{item.quote}</p>
+										<strong>{item.name}</strong>
+										<span>{item.role}</span>
+									</article>
+								))}
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
