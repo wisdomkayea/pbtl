@@ -406,7 +406,7 @@ function HomePage() {
 							onClick={closeModal}
 							aria-label="Close modal"
 						>
-							x
+							×
 						</button>
 
 						<div className={`site-solution-modal-art ${isProModal ? "site-solution-modal-art-pro" : "site-solution-modal-art-e3os"}`}>
