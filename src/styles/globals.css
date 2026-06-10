@@ -810,4 +810,14 @@ a {
 		font-size: clamp(1.95rem, 9vw, 2.8rem);
 	}
 
+	.footer-nav-list {
+		gap: 0.5rem;
+	}
+	.footer-nav-link {
+		color: #101828;
+		font-size: 12px;
+		font-weight: 500;
+		padding: 0.2rem 0.3rem;
+	}
+
 }
